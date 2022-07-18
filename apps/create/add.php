@@ -4911,25 +4911,31 @@ License: For each use you must have a valid license purchased only from above li
 
 														<div id="acc_content2" class="collapse show fs-6 ps-10">
 															<!--begin::Details-->
+															<input type="hidden" id="acc_no" name="" value="">
 															<div class="d-flex flex-wrap py-5">
 																<!--begin::Col-->
 																<div class="flex-equal me-5">
 																	<table class="table table-flush fw-semibold gy-1">
 																		<tr>
 																			<td class="text-muted min-w-125px w-125px">상호명</td>
-																			<td class="text-gray-800" id="acc_name">Hasem</td>
+																			<td class="text-gray-800" id="acc_name"></td>
 																		</tr>
 																		<tr>
 																			<td class="text-muted min-w-125px w-125px">업태</td>
-																			<td class="text-gray-800" id="acc_status">1234-444-4444</td>
+																			<td class="text-gray-800" id="acc_status"></td>
 																		</tr>
 																		<tr>
-																			<td class="text-muted min-w-125px w-125px">배송지 주소</td>
-																			<td class="text-gray-800" id="acc_add1">알파티시티 1로 169 4층</td>
+																			<td class="text-muted min-w-125px w-125px">거래처 주소</td>
+																			<td class="text-gray-800" id="acc_add1" ></td>
 																		</tr>
 																		<tr>
 																			<td class="text-muted min-w-125px w-125px"></td>
-																			<td class="text-gray-800" id="acc_add2">M왈롸오랄라</td>
+																			<td class="text-gray-800" id="acc_add2" ></td>
+																		</tr>
+
+																		<tr>
+																			<td class="text-muted min-w-125px w-125px">배송지 주소</td>
+																			<td class="text-gray-800" id=""><input type="text" id="del_place" class="form-control" name="" value=""></td>
 																		</tr>
 
 																	</table>
@@ -4940,16 +4946,16 @@ License: For each use you must have a valid license purchased only from above li
 																	<table class="table table-flush fw-semibold gy-1">
 																		<tr>
 																			<td class="text-muted min-w-125px w-125px">사업자 번호</td>
-																			<td class="text-gray-800" id="acc_bu_no">AU</td>
+																			<td class="text-gray-800" id="acc_bu_no"></td>
 																		</tr>
 																		<tr>
 																			<td class="text-muted min-w-125px w-125px">번호</td>
-																			<td class="text-gray-800" id="acc_phone">No phone provided</td>
+																			<td class="text-gray-800" id="acc_phone"></td>
 																		</tr>
 																		<tr>
 																			<td class="text-muted min-w-125px w-125px">Fax</td>
 																			<td class="text-gray-800" id="acc_fax">
-																				<a href="#" class="text-gray-900 text-hover-primary">smith@kpmg.com</a>
+																				<a href="#" class="text-gray-900 text-hover-primary"></a>
 																			</td>
 																		</tr>
 
@@ -4984,7 +4990,7 @@ License: For each use you must have a valid license purchased only from above li
 																						<!--begin::Card title-->
 																						<!--begin::Card toolbar-->
 																						<div class="card-toolbar">
-																							<button type="button" class="btn btn-light-primary" data-bs-toggle="modal" data-bs-target="#kt_modal_add_product">추가</button>
+																							<button type="button" class="btn btn-light-primary" onclick="pro_open();">추가</button>
 																						</div>
 																						<!--end::Card toolbar-->
 																					</div>
@@ -4999,9 +5005,11 @@ License: For each use you must have a valid license purchased only from above li
 																								<thead>
 																									<tr class="text-start text-muted fw-bold fs-7 text-uppercase gs-0">
 																										<th class="min-w-150px">Product</th>
-																										<th class="min-w-150px">Option</th>
-																										<th class="min-w-100px">Qty</th>
-																										<th class="min-w-150px">text</th>
+																										<th class="min-w-90px">Option</th>
+																										<th class="min-w-90px">Price</th>
+																										<th class="min-w-70px">Qty</th>
+																										<th class="min-w-100px">text</th>
+																										<th class="min-w-50px">img</th>
 																										<th class="min-w-70px text-end">Remove</th>
 																									</tr>
 																								</thead>
@@ -5048,61 +5056,12 @@ License: For each use you must have a valid license purchased only from above li
 											<!--begin::Section-->
 											<div class="mb-7">
 												<!--begin::Title-->
-												<h5 class="mb-3">영업 담당자</h5>
+												<h5 class="mb-3">영업 담당자 : 보노보노</h5>
 												<!--end::Title-->
 												<!--begin::Details-->
 												<div class="mb-0">
 													<!--begin::Search-->
-													<div id="kt_header_search2" class="header-search d-flex align-items-center w-lg-225px" data-kt-search-keypress="true" data-kt-search-min-length="2" data-kt-search-enter="enter" data-kt-search-layout="menu" data-kt-search-responsive="lg" data-kt-menu-trigger="auto" data-kt-menu-permanent="true" data-kt-menu-placement="bottom-end">
-														<!--begin::Tablet and mobile search toggle-->
-														<div data-kt-search-element="toggle" class="d-flex d-lg-none align-items-center">
-															<div class="btn btn-icon btn-color-gray-700 btn-active-color-primary btn-outline btn-outline-secondary bg-transparent w-40px h-40px">
-																<!--begin::Svg Icon | path: icons/duotune/general/gen021.svg-->
-																<span class="svg-icon svg-icon-1">
-																	<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-																		<rect opacity="0.5" x="17.0365" y="15.1223" width="8.15546" height="2" rx="1" transform="rotate(45 17.0365 15.1223)" fill="currentColor" />
-																		<path d="M11 19C6.55556 19 3 15.4444 3 11C3 6.55556 6.55556 3 11 3C15.4444 3 19 6.55556 19 11C19 15.4444 15.4444 19 11 19ZM11 5C7.53333 5 5 7.53333 5 11C5 14.4667 7.53333 17 11 17C14.4667 17 17 14.4667 17 11C17 7.53333 14.4667 5 11 5Z" fill="currentColor" />
-																	</svg>
-																</span>
-																<!--end::Svg Icon-->
-															</div>
-														</div>
-														<!--end::Tablet and mobile search toggle-->
-														<!--begin::Form(use d-none d-lg-flex classes for responsive search)-->
-														<form data-kt-search-element="form" class="d-none d-lg-block w-100 mb-5 mb-lg-0 position-relative" autocomplete="off">
-															<!--begin::Hidden input(Added to disable form autocomplete)-->
-															<input type="hidden" />
-															<!--end::Hidden input-->
-															<!--begin::Icon-->
-															<!--begin::Svg Icon | path: icons/duotune/general/gen004.svg-->
-															<span class="svg-icon svg-icon-2 svg-icon-gray-700 position-absolute top-50 translate-middle-y ms-4">
-																<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-																	<path d="M21.7 18.9L18.6 15.8C17.9 16.9 16.9 17.9 15.8 18.6L18.9 21.7C19.3 22.1 19.9 22.1 20.3 21.7L21.7 20.3C22.1 19.9 22.1 19.3 21.7 18.9Z" fill="currentColor" />
-																	<path opacity="0.3" d="M11 20C6 20 2 16 2 11C2 6 6 2 11 2C16 2 20 6 20 11C20 16 16 20 11 20ZM11 4C7.1 4 4 7.1 4 11C4 14.9 7.1 18 11 18C14.9 18 18 14.9 18 11C18 7.1 14.9 4 11 4ZM8 11C8 9.3 9.3 8 11 8C11.6 8 12 7.6 12 7C12 6.4 11.6 6 11 6C8.2 6 6 8.2 6 11C6 11.6 6.4 12 7 12C7.6 12 8 11.6 8 11Z" fill="currentColor" />
-																</svg>
-															</span>
-															<!--end::Svg Icon-->
-															<!--end::Icon-->
-															<!--begin::Input-->
-															<input list="languages" id="employee" class="form-control bg-transparent ps-13 fs-7 h-40px" name="search" value="" placeholder="영업 담당자 검색.." />
-															<datalist id="languages">
-								      <option value="보노보노"></option>
-								      <option value="짱구"></option>
-								      <option value="피카츄"></option>
 
-								</datalist>
-
-															<!--end::Input-->
-															<!--begin::Spinner-->
-															<span class="position-absolute top-50 end-0 translate-middle-y lh-0 d-none me-5" data-kt-search-element="spinner">
-																<span class="spinner-border h-15px w-15px align-middle text-gray-400"></span>
-															</span>
-
-															<!--end::Reset-->
-														</form>
-
-														<!--end::Menu-->
-													</div>
 													<!--end::Search-->
 													<!--end::Price-->
 												</div>
@@ -5121,10 +5080,24 @@ License: For each use you must have a valid license purchased only from above li
 												<div class="mb-0">
 													<!--begin::Card info-->
 													<div class="fw-semibold text-gray-600 d-flex align-items-center">
-														<select name="timezone" aria-label="Select a Timezone" data-control="select2" data-placeholder="date_period" class="form-select form-select-sm form-select-solid">
-															<option value="next">착택</option>
-															<option value="last">착불</option>
-															<option value="between">현택</option>
+														<select id="product_status" name="timezone" aria-label="Select a Timezone" data-control="select2" data-placeholder="date_period" class="form-select form-select-sm form-select-solid">
+															<?php
+															include '../../ajax/databaselog.php';
+															$sql = "SELECT * FROM dbo.product_status";
+															$result= sqlsrv_query($con,$sql,$params,$options);
+															$total = sqlsrv_num_rows($result);
+
+															for ($i=0; $i < $total; $i++) {
+																$row = sqlsrv_fetch_array($result);
+																$status_name = $row['status_name'];
+																$status_no = $row['status_no'];
+
+															?>
+															<option value="<?=$status_no?>"><?=$status_name?></option>
+														<?php } ?>
+
+
+
 
 														</select>
 												</div>
@@ -5136,10 +5109,64 @@ License: For each use you must have a valid license purchased only from above li
 												<!--end::Details-->
 											</div>
 
+
+											<div class="separator separator-dashed mb-7"></div>
+											<!--end::Seperator-->
+											<!--begin::Section-->
+											<div class="mb-10">
+												<!--begin::Title-->
+
+		<h5 class="mb-3">선택</h5>
+													<!--begin::Card info-->
+													<div class="text-gray-500 text-center fw-semibold fs-6">
+																						<input type="checkbox" id="regist_status1" class="form-check-input">
+													<label for="id_remember">
+													입금 후 출고
+													</label>
+
+
+													<input type="checkbox" id="pw_remember" class="form-check-input">
+													<label for="pw_remember">
+														즉시 출하
+													</label>
+													</div>
+
+												<!--end::Details-->
+											</div>
+
+
+
+
+											<div class="separator separator-dashed mb-7"></div>
+											<!--end::Seperator-->
+											<!--begin::Section-->
+											<div class="mb-10">
+												<!--begin::Title-->
+												<h5 class="mb-3">납기일</h5>
+												<!--end::Title-->
+												<!--begin::Details-->
+												<div class="mb-0">
+													<!--begin::Card info-->
+													<?php
+													$today = Date('Y-m-d');
+													 ?>
+													<div class="fw-semibold text-gray-600 d-flex align-items-center">
+<input class="form-control form-control-solid" name="calendar_event_start_date" id="datep1" value="<?=$today?>"  />
+												</div>
+													<!--end::Card info-->
+													<!--begin::Card expiry-->
+
+													<!--end::Card expiry-->
+												</div>
+												<!--end::Details-->
+											</div>
+
 											<!--end::Actions-->
 										</div>
+										<a class="btn btn-primary" style="margin-top:5%;" onclick="insert_page();" >등록</a>
 										<!--end::Card body-->
 									</div>
+
 									<!--end::Card-->
 								</div>
 								<!--end::Sidebar-->
@@ -5194,9 +5221,8 @@ License: For each use you must have a valid license purchased only from above li
 													<!--end::Svg Icon-->
 													<!--end::Icon-->
 													<!--begin::Input-->
-													<input list="languages2" class="form-control form-control-lg form-control-solid px-15" name="search" value="" placeholder="거래처 명을 입력 후 엔터"  id="acc_search" />
+													<input list="languages2" class="form-control form-control-lg form-control-solid px-15" name="search" value="" placeholder="거래처 명을 입력 후 엔터"  id="acc_search" autocomplete="off"/>
 	<?php
-include '../../ajax/databaselog.php';
 
 $sql = "SELECT * FROM dbo.account";
 
@@ -5272,11 +5298,29 @@ $total = sqlsrv_num_rows($result);
 														 </h3>
 														 <!--end::Label-->
 	<h4 class="fw-bold">구분</h4>
+
+
+															<?php
+															$sql = "SELECT * FROM dbo.product_category";
+
+															$result = sqlsrv_query($con,$sql,$params,$options);
+
+															$total = sqlsrv_num_rows($result);
+
+
+?>
 														 <div class="fw-semibold text-gray-600 d-flex align-items-center mb-5">
-															 <select class="form-select form-select-solid form-select-sm" data-control="select2" data-hide-search="true">
-														 		<option value="1">Guest</option>
-														 		<option value="2" selected="selected">Owner</option>
-														 		<option value="3">Can Edit</option>
+															 <select class="form-select form-select-solid form-select-sm" data-control="select2" data-hide-search="true" id="sel_status">
+<option value="">선택</option>
+
+						<?php
+						for ($i=0; $i < $total; $i++) {
+							$row = sqlsrv_fetch_array($result);
+							$category_no = $row['category_no'];
+							$category_name = $row['category_name'];
+						 ?>
+						 <option value="<?=$category_no?>"><?=$category_name?></option>
+					 <?php } ?>
 														 	</select>
 														 </div>
 
@@ -5287,28 +5331,12 @@ $total = sqlsrv_num_rows($result);
 														 <div class="scroll-y mh-300px me-n7 pe-7">
 																<h4 class="fw-bold">품목명</h4>
 
-																<!--begin::Product-->
-																<div class="fv-row mb-5 mt-3">
-																	 <!--begin::Subscription-->
-																	 <label class="d-flex align-items-center">
-																			<!--begin::Radio-->
-																			<span class="form-check form-check-custom form-check-solid me-5">
-																				 <input class="form-check-input" type="radio" name="product" checked="checked" data-kt-product-name="Basic" data-kt-product-price="15.99" data-kt-product-frequency="Month" />
-																			</span>
-																			<!--end::Radio-->
-																			<!--begin::Description-->
-																			<span class="d-flex flex-column me-3">
-																				 <span class="fw-bold">Basic</span>
-																				 <span class="text-gray-400 fw-semibold fs-6">Basic subscription</span>
-																			</span>
-																			<!--end::Description-->
-																			<!--begin::Pricing-->
-																			<span class="fw-bold ms-auto">$15.99 /
-																	</span>
-																			<!--end::Pricing-->
-																	 </label>
-																	 <!--end::Subscription-->
-																</div>
+
+															<div id="insert_pro_body">
+
+															</div>
+
+
 																<!--end::Input group-->
 														 </div>
 
@@ -5320,13 +5348,13 @@ $total = sqlsrv_num_rows($result);
 																	 <!--begin::Col-->
 																	 <div class="col-6">
 																			<h4 class="fw-bold">규격</h4>
-																			<input type="text" class="form-control form-control-sm form-control-solid" name="" placeholder="" value="" />
+																			<input type="text" id="opval1" class="form-control form-control-sm form-control-solid" name="" placeholder="" value="" />
 																	 </div>
 																	 <!--end::Col-->
 																	 <!--begin::Col-->
 																	 <div class="col-6">
 																			<h4 class="fw-bold">캐리어/핀높이</h4>
-																			<input type="text" class="form-control form-control-sm form-control-solid" name="" placeholder="" value="" />
+																			<input type="text" id="opval2" class="form-control form-control-sm form-control-solid" name="" placeholder="" value="" />
 																	 </div>
 
 																</div>
@@ -5350,12 +5378,50 @@ $total = sqlsrv_num_rows($result);
 																<!--end::Row-->
 														 </div>
 
+														 <div class="fv-row mb-7">
+															 <!--begin::Label-->
+															 <label class="d-block fw-semibold fs-6 mb-5">Photo</label>
+															 <!--end::Label-->
+															 <!--begin::Image placeholder-->
+															 <style>.image-input-placeholder { background-image: url('assets/media/svg/files/blank-image.svg'); } [data-theme="dark"] .image-input-placeholder { background-image: url('assets/media/svg/files/blank-image-dark.svg'); }</style>
+															 <!--end::Image placeholder-->
+															 <!--begin::Image input-->
+															 <div class="image-input image-input-outline image-input-placeholder" data-kt-image-input="true">
+																 <!--begin::Preview existing avatar-->
+																 <div id="photo_id" class="image-input-wrapper w-125px h-125px" ></div>
+																 <!--end::Preview existing avatar-->
+																 <!--begin::Label-->
+																 <label class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow" data-kt-image-input-action="change" data-bs-toggle="tooltip" title="Change avatar">
+																	 <i class="bi bi-pencil-fill fs-7"></i>
+																	 <!--begin::Inputs-->
+																	 <input type="file" name="avatar" accept=".png, .jpg, .jpeg" />
+																	 <input type="hidden" name="avatar_remove" />
+																	 <!--end::Inputs-->
+																 </label>
+																 <!--end::Label-->
+																 <!--begin::Cancel-->
+																 <span class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow" data-kt-image-input-action="cancel" data-bs-toggle="tooltip" title="Cancel avatar">
+																	 <i class="bi bi-x fs-2"></i>
+																 </span>
+																 <!--end::Cancel-->
+																 <!--begin::Remove-->
+																 <span class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow" data-kt-image-input-action="remove" data-bs-toggle="tooltip" title="Remove avatar">
+																	 <i class="bi bi-x fs-2"></i>
+																 </span>
+																 <!--end::Remove-->
+															 </div>
+															 <!--end::Image input-->
+															 <!--begin::Hint-->
+															 <div class="form-text">Allowed file types: png, jpg, jpeg.</div>
+															 <!--end::Hint-->
+														 </div>
+
 														 <div class="d-flex flex-column mb-10 fv-row">
 																<!--begin::Label-->
 																<div class="fs-5 fw-bold form-label mb-3">비고
 																<i tabindex="0" class="cursor-pointer fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-html="true" data-bs-content="Add an addition invoice footer note."></i></div>
 																<!--end::Label-->
-																<textarea class="form-control form-control-solid rounded-3" rows="4"></textarea>
+																<textarea id="text_val" class="form-control form-control-solid rounded-3" rows="4"></textarea>
 														 </div>
 													</div>
 													<!--end::Modal body-->
@@ -5569,7 +5635,7 @@ $total = sqlsrv_num_rows($result);
 							<!--begin::Copyright-->
 							<div class="text-dark order-2 order-md-1">
 								<span class="text-gray-400 fw-semibold me-1">Created by</span>
-								<a href="https://keenthemes.com" target="_blank" class="text-muted text-hover-primary fw-semibold me-2 fs-6">Keenthemes</a>
+								<a href="#" target="_blank" class="text-muted text-hover-primary fw-semibold me-2 fs-6">sj</a>
 							</div>
 							<!--end::Copyright-->
 							<!--begin::Menu-->
@@ -9279,9 +9345,12 @@ $total = sqlsrv_num_rows($result);
 		<script src="assets/plugins/custom/datatables/datatables.bundle.js"></script>
 		<!--end::Vendors Javascript-->
 		<!--begin::Custom Javascript(used by this page)-->
+
 		<script src="assets/js/custom/apps/subscriptions/add/advanced.js"></script>
 		<script src="assets/js/custom/apps/subscriptions/add/customer-select.js"></script>
 		<script src="assets/js/custom/apps/subscriptions/add/products.js"></script>
+
+
 		<script src="assets/js/widgets.bundle.js"></script>
 		<script src="assets/js/custom/widgets.js"></script>
 		<script src="assets/js/custom/apps/chat/chat.js"></script>
@@ -9295,21 +9364,103 @@ $total = sqlsrv_num_rows($result);
 			function cancel(){
 				$("#kt_modal_add_product").modal('hide');
 			}
-		function insert_product(){
-$(".dataTables_empty").hide();
 
+
+
+
+		function insert_product(){
+
+
+$(".dataTables_empty").hide();
+var sel_status = document.querySelector('#sel_status');
+   sel_status = sel_status.options[sel_status.selectedIndex].text;
+var sel_status2 = $("#sel_status").val();
+var opval1 = $("#opval1").val();
+var opval2 = $("#opval2").val();
+var text_val = $("#text_val").val();
+// var sel_status = $("#sel_status").val();
 var pro_count = $("#pro_count").val();
+var pro_name = $("input[name='product']:checked").val();
+var pro_no = $("input[name='product']:checked").attr('id');
+var base64 = $("#photo_id").css('background-image');
+console.log(base64)
+if(base64 != 'none'){
+	base64 = base64.split('url(');
+	base64 = base64[1];
+	base64 = base64.split(')');
+	base64 = base64[0];
+}
+
+
+
+
+
+if(text_val == '필수입력'){
+Swal.fire({
+icon: 'error',
+title: '비고를 작성하세요!!',
+showClass: {
+popup: 'animate__animated animate__fadeInDown'
+},
+hideClass: {
+popup: 'animate__animated animate__fadeOutUp'
+}
+})
+return;
+}
+
+
+if(pro_name === undefined){
+	Swal.fire({
+		icon: 'error',
+		title: '품목명을 선택하세요!',
+		showClass: {
+			popup: 'animate__animated animate__fadeInDown'
+		},
+		hideClass: {
+			popup: 'animate__animated animate__fadeOutUp'
+		}
+	})
+	return;
+}
+
+var name_arr = new Array();
+var product_count = $(".product_count").length;
+
+for (var i = 0; i < product_count; i++) {
+
+	if(pro_name == $(".pro_name").eq(i).text()){
+		Swal.fire({
+			icon: 'error',
+			title: '동일한 품목이 존재합니다!',
+			showClass: {
+				popup: 'animate__animated animate__fadeInDown'
+			},
+			hideClass: {
+				popup: 'animate__animated animate__fadeOutUp'
+			}
+		})
+		return;
+	}
+}
+
+
+
+
 var table = '';
 table += '<tr class="product_count">';
-	table += '<td><span class="d-flex flex-column me-3"><span class="fw-bold">Basic</span><span class="text-gray-400 fw-semibold fs-6">Basic subscription</span></span></td>';
-		table += '<td>149.99 / Month</td>';
-	table += '<td>'+pro_count+'</td>';
-table += '<td><input type="text" class="form-control"value="" ></td>';
+	table += '<td><span class="d-flex flex-column me-3"><span class="fw-bold pro_name" id="'+pro_no+'">'+pro_name+'</span><span class="text-gray-400 fw-semibold fs-6 pro_category" id="'+sel_status2+'">'+sel_status+'</span></span></td>';
+		table += '<td><span class="pro_stand">'+opval1+'</span> / <span class="pro_height">'+opval2+'</span></td>';
+		table += '<td class="pro_price">'+pro_count+'</td>';
+	table += '<td class="pro_count">'+pro_count+'</td>';
+table += '<td><input type="text" class="form-control pro_text" value="'+text_val+'" ></td>';
+table += '<td><span class="svg-icon svg-icon-3 img_count" onclick="open_img(this);"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 9C5 8.44772 5.44772 8 6 8H18C18.5523 8 19 8.44772 19 9V18C19 19.6569 17.6569 21 16 21H8C6.34315 21 5 19.6569 5 18V9Z" fill="currentColor"></path><path opacity="0.5" d="M5 5C5 4.44772 5.44772 4 6 4H18C18.5523 4 19 4.44772 19 5V5C19 5.55228 18.5523 6 18 6H6C5.44772 6 5 5.55228 5 5V5Z" fill="currentColor"></path><path opacity="0.5" d="M9 4C9 3.44772 9.44772 3 10 3H14C14.5523 3 15 3.44772 15 4V4H9V4Z" fill="currentColor"></path></svg></span></td>';
+table += '<input type="hidden" class="image_base" value='+base64+'/>';
 	table += '<td class="text-end">';
 
 		// table += '<a href="#" class="btn btn-icon btn-flex btn-active-light-primary w-30px h-30px me-3" onclick="remove_Tr();">';
 
-			table += '<span class="svg-icon svg-icon-3" onclick = "data_remove_btn(this);">';
+			table += '<span class="svg-icon svg-icon-3 remove_btn" onclick = "data_remove_btn(this);">';
 				table += '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">';
 					table += '<path d="M5 9C5 8.44772 5.44772 8 6 8H18C18.5523 8 19 8.44772 19 9V18C19 19.6569 17.6569 21 16 21H8C6.34315 21 5 19.6569 5 18V9Z" fill="currentColor" />';
 					table += '<path opacity="0.5" d="M5 5C5 4.44772 5.44772 4 6 4H18C18.5523 4 19 4.44772 19 5V5C19 5.55228 18.5523 6 18 6H6C5.44772 6 5 5.55228 5 5V5Z" fill="currentColor" />';
@@ -9326,6 +9477,10 @@ $("#product_body").append(table);
 		}
 
 		function data_remove_btn(data) {
+
+
+			var remove_btn = $(".remove_btn").index(data);
+
 var table_size = $(".product_count").length;
 
 
@@ -9337,7 +9492,7 @@ var table_size = $(".product_count").length;
 
 	tr.parentNode.removeChild(tr);
 
-console.log(table_size)
+
 	if(table_size == 1){
 		$(".dataTables_empty").show();
 	}
@@ -9353,10 +9508,12 @@ $("#acc_search").keydown(function (event) {
 		//엔터키를 클릭시
 		if (event.which === 13) {
 				//버튼 자동 클릭
-					$("#acc_content1").hide();
-				$("#acc_content2").show();
+
 
 				$("#kt_modal_customer_search").modal('hide');
+
+				var acc_search = $("#acc_search").val();
+				get_search(acc_search);
 		}
 });
 function search_btn(){
@@ -9365,9 +9522,282 @@ $("#kt_modal_customer_search").modal('show');
 // $("#acc_search").focus();
 }
 
+
+function get_search(data){
+
+	$.ajax({
+		type: 'post',
+		dataType: 'json',
+		url: './ajax/get_acc.php',
+		contentType :   "application/x-www-form-urlencoded; charset=UTF-8",
+		async:false, // 전역변수 설정 변수
+		data : {
+			acc_name:data,
+		},
+		success: function (retVal) {
+if(retVal.length == 0){
+
+alert('존재하지않는 거래처입니다!');
+return;
+}
+
+if(retVal.length > 0){
+	$("#acc_content1").hide();
+$("#acc_content2").show();
+}else{
+	// Swal.fire({
+	// 	icon: 'error',
+	// 	title: '존재하지않는 !',
+	// 	showClass: {
+	// 		popup: 'animate__animated animate__fadeInDown'
+	// 	},
+	// 	hideClass: {
+	// 		popup: 'animate__animated animate__fadeOutUp'
+	// 	}
+	// })
+}
+$("#acc_name").empty();
+$("#acc_name").append(retVal[0].acc_name);
+$("#acc_bu_no").empty();
+$("#acc_bu_no").append(retVal[0].acc_bu_no);
+$("#acc_add1").empty();
+$("#acc_add1").append(retVal[0].acc_add1);
+$("#acc_no").val(retVal[0].no);
+$("#acc_add2").empty();
+$("#acc_add2").append(retVal[0].acc_add2);
+
+$("#acc_phone").empty();
+$("#acc_phone").append(retVal[0].acc_phone);
+
+$("#acc_fax").empty();
+$("#acc_fax").append(retVal[0].acc_fax);
+
+$("#acc_status").empty();
+$("#acc_status").append(retVal[0].acc_status);
+		},
+		error: function (request, status, error) {
+			console.log('code: '+request.status+"\n"+'message: '+request.responseText+"\n"+'error: '+error);
+			// 오류가 날경우 console창 오류 메세지 출력
+	}
+	});
+
+
+
+}
+
+$("#sel_status").change(function(event) {
+var sel_status = $("#sel_status").val();
+get_product(sel_status);
+});
+
+function get_product(sel_status){
+	$("#insert_pro_body").empty();
+	$("#insert_pro_body").append('loading..........');
+	$.ajax({
+		type: 'post',
+		dataType: 'json',
+		url: './ajax/get_product.php',
+		contentType :   "application/x-www-form-urlencoded; charset=UTF-8",
+		async:false, // 전역변수 설정 변수
+		data : {
+			sel_status:sel_status,
+		},
+		success: function (retVal) {
+
+$("#insert_pro_body").empty();
+for (var i = 0; i < retVal.length; i++) {
+	var table = '';
+				table += '<div class="fv-row mb-5 mt-3">';
+					 table += '<label class="d-flex align-items-center">';
+							table += '<span class="form-check form-check-custom form-check-solid me-5">';
+								table += '<input class="form-check-input" type="radio" value="'+retVal[i].pro_name+'" name="product" id="'+retVal[i].no+'" checked="checked" data-kt-product-name="Basic" data-kt-product-price="15.99" data-kt-product-frequency="Month" />';
+						table += '</span>';
+							table += '<span class="d-flex flex-column me-3">';
+								 table += '<span class="fw-bold">'+retVal[i].pro_name+'</span>';
+								 // table += '<span class="text-gray-400 fw-semibold fs-6">Basic subscription</span>';
+							table += '</span>';
+							table += '<span class="fw-bold ms-auto">금액:744만 /재고:400';
+					table += '</span>';
+
+					 table += '</label>';
+
+				table += '</div>';
+	$("#insert_pro_body").append(table);
+}
+
+
+		},
+		error: function (request, status, error) {
+			console.log('code: '+request.status+"\n"+'message: '+request.responseText+"\n"+'error: '+error);
+			// 오류가 날경우 console창 오류 메세지 출력
+	}
+});
+
+  $('input[name="product"]').click(function() {
+var pro_name_Ck = $("input[name='product']:checked").val();
+
+
+if(pro_name_Ck.indexOf('특') != '-1'){
+	$("#text_val").val('');
+	$("#text_val").css('color','red');
+	$("#text_val").val('필수입력');
+}else{
+	$("#text_val").css('color','black');
+	$("#text_val").val('');
+}
+
+	});
+}
+
+
 </script>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+<link rel="stylesheet" href="/resources/demos/style.css">
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+ <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+<script type="text/javascript">
 
 
+
+$(function(){
+	$("#datep1").datepicker({ dateFormat: 'yy-mm-dd' }); // yyyy-mm-dd 형식으로 date타입 포멧
+});
+function pro_open(){
+var acc_ck = $("#acc_no").val();
+if(acc_ck == ''){
+	Swal.fire({
+		icon: 'error',
+		title: '거래처를 선택하세요!',
+		showClass: {
+			popup: 'animate__animated animate__fadeInDown'
+		},
+		hideClass: {
+			popup: 'animate__animated animate__fadeOutUp'
+		}
+	})
+	return;
+}
+	$("#kt_modal_add_product").modal('show');
+}
+
+function insert_page(){
+var acc_name = $("#acc_name").text();
+var due_date = $("#datep1").val();
+var acc_no = $("#acc_no").val();
+if($("#regist_status1").is(":checked") == true){
+var regist_status1 = '체크됨';
+}else{
+	var regist_status1 = '체크안됨';
+}
+
+
+var del_place = $("#del_place").val();
+var product_status = $("#product_status").val();
+
+
+var product_count = $(".product_count").length;
+
+var name_arr = new Array();
+var count_arr = new Array();
+var price_arr = new Array();
+var stand_arr = new Array();
+var height_arr = new Array();
+var text_arr = new Array();
+var category_arr = new Array();
+var image_arr = new Array();
+
+
+if(product_count == 0){
+	Swal.fire({
+		icon: 'error',
+		title: '제품을 선택하세요!',
+		showClass: {
+			popup: 'animate__animated animate__fadeInDown'
+		},
+		hideClass: {
+			popup: 'animate__animated animate__fadeOutUp'
+		}
+	})
+	return;
+}
+
+for (var i = 0; i < product_count; i++) {
+	name_arr[i] = $(".pro_name").eq(i).attr('id');
+	count_arr[i] = $(".pro_count").eq(i).text();
+	price_arr[i] = $(".pro_price").eq(i).text();
+	stand_arr[i] = $(".pro_stand").eq(i).text();
+	height_arr[i] = $(".pro_height").eq(i).text();
+	text_arr[i] = $(".pro_text").eq(i).val();
+	category_arr[i] = $(".pro_category").eq(i).attr('id');
+	image_arr[i] = $(".image_base").eq(i).val();
+}
+
+
+$.ajax({
+	type: 'post',
+	url: './ajax/insert_regist.php',
+	async:false, // 전역변수 설정 변수
+	data:{
+
+		acc_name:acc_no,   //컬럼
+		due_date:due_date,      //params
+		regist_status1:regist_status1,   //컬럼
+		product_status:product_status,      //params
+		del_place:del_place,   //컬럼
+
+		name_arr:name_arr,
+		count_arr:count_arr,
+		price_arr:price_arr,
+		stand_arr:stand_arr,
+		height_arr:height_arr,
+		text_arr:text_arr,
+		category_arr:category_arr,
+		product_count:product_count,
+		image_arr:image_arr,
+
+	},
+	success: function (data) {
+
+
+		Swal.fire({
+  title: '등록되었습니다!',
+  showDenyButton: false,
+	icon: 'success',
+  showCancelButton: false,
+  confirmButtonText: '확인',
+  denyButtonText: `Don't save`,
+}).then((result) => {
+  /* Read more about isConfirmed, isDenied below */
+  if (result.isConfirmed) {
+    location.href='./index_6.php'
+  } else if (result.isDenied) {
+    Swal.fire('Changes are not saved', '', 'info')
+  }
+})
+
+	},
+	error: function (request, status, error) {
+		console.log('code: '+request.status+"\n"+'message: '+request.responseText+"\n"+'error: '+error);
+	}
+});
+
+
+}
+
+function open_img(data){
+
+var ttt = $(".img_count").index(data);
+
+var base64 = $(".image_base").eq(ttt).val();
+
+console.log(ttt)
+Swal.fire({
+  imageUrl: base64,
+
+  // imageAlt: 'A tall image'
+})
+}
+</script>
 	</body>
 	<!--end::Body-->
 </html>

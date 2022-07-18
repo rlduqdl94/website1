@@ -6165,7 +6165,7 @@ var depart = $("input[name='user_role']:checked").val();
 // var photo = $(".image-input-wrapper").
 
 var base64 = $("#photo_id").css('background-image');
-console.log(base64);
+
 
 var role = $("input[name='depart_role']:checked").val();
 if(id == ''){

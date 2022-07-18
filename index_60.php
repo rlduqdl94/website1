@@ -5235,140 +5235,65 @@ License: For each use you must have a valid license purchased only from above li
 									<!--begin::Tables Widget 5-->
 									<div class="card mb-xl-8">
 
-										<div class="card-header border-0 pt-6">
+										<div class="card-header border-0 pt-5">
 											<!--begin::Card title-->
+
 											<div class="card-title">
+
 												<!--begin::Search-->
 												<div class="d-flex align-items-center position-relative my-1">
+
 													<!--begin::Svg Icon | path: icons/duotune/general/gen021.svg-->
-													<span class="svg-icon svg-icon-1 position-absolute ms-6">
+													<span class="svg-icon svg-icon-1 position-absolute ms-4">
 														<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 															<rect opacity="0.5" x="17.0365" y="15.1223" width="8.15546" height="2" rx="1" transform="rotate(45 17.0365 15.1223)" fill="currentColor" />
 															<path d="M11 19C6.55556 19 3 15.4444 3 11C3 6.55556 6.55556 3 11 3C15.4444 3 19 6.55556 19 11C19 15.4444 15.4444 19 11 19ZM11 5C7.53333 5 5 7.53333 5 11C5 14.4667 7.53333 17 11 17C14.4667 17 17 14.4667 17 11C17 7.53333 14.4667 5 11 5Z" fill="currentColor" />
 														</svg>
 													</span>
 													<!--end::Svg Icon-->
-													<input type="text" data-kt-subscription-table-filter="search" class="form-control form-control-solid w-250px ps-14" placeholder="Searching..." />
+
+													<input type="text" data-kt-ecommerce-order-filter="search" class="form-control form-control-solid w-250px ps-14" placeholder="Search Order" />
 												</div>
 												<!--end::Search-->
 											</div>
-											<!--begin::Card title-->
+											<!--end::Card title-->
 											<!--begin::Card toolbar-->
-											<div class="card-toolbar">
-												<!--begin::Toolbar-->
-												<div class="d-flex justify-content-end" data-kt-subscription-table-toolbar="base">
-													<!--begin::Filter-->
-													<button type="button" class="btn btn-light-primary me-3" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">
-													<!--begin::Svg Icon | path: icons/duotune/general/gen031.svg-->
-													<span class="svg-icon svg-icon-2">
-														<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-															<path d="M19.0759 3H4.72777C3.95892 3 3.47768 3.83148 3.86067 4.49814L8.56967 12.6949C9.17923 13.7559 9.5 14.9582 9.5 16.1819V19.5072C9.5 20.2189 10.2223 20.7028 10.8805 20.432L13.8805 19.1977C14.2553 19.0435 14.5 18.6783 14.5 18.273V13.8372C14.5 12.8089 14.8171 11.8056 15.408 10.964L19.8943 4.57465C20.3596 3.912 19.8856 3 19.0759 3Z" fill="currentColor" />
-														</svg>
-													</span>
-													<!--end::Svg Icon-->Filter</button>
-													<!--begin::Menu 1-->
-													<div class="menu menu-sub menu-sub-dropdown w-300px w-md-325px" data-kt-menu="true">
-														<!--begin::Header-->
-														<div class="px-7 py-5">
-															<div class="fs-5 text-dark fw-bold">Filter Options</div>
-														</div>
-														<!--end::Header-->
-														<!--begin::Separator-->
-														<div class="separator border-gray-200"></div>
-														<!--end::Separator-->
-														<!--begin::Content-->
-														<div class="px-7 py-5" data-kt-subscription-table-filter="form">
-															<!--begin::Input group-->
-															<div class="mb-10">
-																<label class="form-label fs-6 fw-semibold">납기일:</label>
-																<select class="form-select form-select-solid fw-bold" data-kt-select2="true" data-placeholder="Select option" data-allow-clear="true" data-kt-subscription-table-filter="month" data-hide-search="true">
-																	<option></option>
-																	<option value="-01-">1월</option>
-																	<option value="-02-">2월</option>
-																	<option value="-03-">3월</option>
-																	<option value="-04-">4월</option>
-																	<option value="-05-">5월</option>
-																	<option value="-06-">6월</option>
-																	<option value="-07-">7월</option>
-																	<option value="-08-">8월</option>
-																	<option value="-09-">9월</option>
-																	<option value="-10-">10월</option>
-																	<option value="-11-">11월</option>
-																	<option value="-12-">12월</option>
-																</select>
-															</div>
-															<!--end::Input group-->
-															<!--begin::Input group-->
-															<div class="mb-10">
-																<label class="form-label fs-6 fw-semibold">Status:</label>
-																<select class="form-select form-select-solid fw-bold" data-kt-select2="true" data-placeholder="Select option" data-allow-clear="true" data-kt-subscription-table-filter="status" data-hide-search="true">
-																	<option></option>
-																	<option value="Active">Active</option>
-																	<option value="Expiring">Expiring</option>
-																	<option value="Suspended">Suspended</option>
-																</select>
-															</div>
-															<!--end::Input group-->
-															<!--begin::Input group-->
-															<!-- <div class="mb-10">
-																<label class="form-label fs-6 fw-semibold">Billing Method:</label>
-																<select class="form-select form-select-solid fw-bold" data-kt-select2="true" data-placeholder="Select option" data-allow-clear="true" data-kt-subscription-table-filter="billing" data-hide-search="true">
-																	<option></option>
-																	<option value="Auto-debit">Auto-debit</option>
-																	<option value="Manual - Credit Card">Manual - Credit Card</option>
-																	<option value="Manual - Cash">Manual - Cash</option>
-																	<option value="Manual - Paypal">Manual - Paypal</option>
-																</select>
-															</div> -->
-															<!--end::Input group-->
-															<!--begin::Input group-->
-															<div class="mb-10">
-																<label class="form-label fs-6 fw-semibold">발주일:</label>
-																<select class="form-select form-select-solid fw-bold" data-kt-select2="true" data-placeholder="Select option" data-allow-clear="true" data-kt-subscription-table-filter="product" data-hide-search="true">
-																	<option></option>
-																	<option value="-01-">1월</option>
-																	<option value="-02-">2월</option>
-																	<option value="-03-">3월</option>
-																	<option value="-04-">4월</option>
-																	<option value="-05-">5월</option>
-																	<option value="-06-">6월</option>
-																	<option value="-07-">7월</option>
-																	<option value="-08-">8월</option>
-																	<option value="-09-">9월</option>
-																	<option value="-10-">10월</option>
-																	<option value="-11-">11월</option>
-																	<option value="-12-">12월</option>
-																</select>
-															</div>
-															<!--end::Input group-->
-															<!--begin::Actions-->
-															<div class="d-flex justify-content-end">
-																<button type="reset" class="btn btn-light btn-active-light-primary fw-semibold me-2 px-6" data-kt-menu-dismiss="true" data-kt-subscription-table-filter="reset">Reset</button>
-																<button type="submit" class="btn btn-primary fw-semibold px-6" data-kt-menu-dismiss="true" data-kt-subscription-table-filter="filter">Apply</button>
-															</div>
-															<!--end::Actions-->
-														</div>
-														<!--end::Content-->
-													</div>
-													<!--end::Menu 1-->
-													<!--end::Filter-->
-
-													<!--end::Export-->
-													<!--begin::Add subscription-->
-
-													<!--end::Add subscription-->
+											<div class="card-toolbar flex-row-fluid justify-content-end gap-5">
+												<!--begin::Flatpickr-->
+												<div class="input-group w-250px">
+													<input class="form-control form-control-solid rounded rounded-end-0" placeholder="Pick date range" id="kt_ecommerce_sales_flatpickr" />
+													<button class="btn btn-icon btn-light" id="kt_ecommerce_sales_flatpickr_clear">
+														<!--begin::Svg Icon | path: icons/duotune/arrows/arr088.svg-->
+														<span class="svg-icon svg-icon-2">
+															<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																<rect opacity="0.5" x="7.05025" y="15.5356" width="12" height="2" rx="1" transform="rotate(-45 7.05025 15.5356)" fill="currentColor" />
+																<rect x="8.46447" y="7.05029" width="12" height="2" rx="1" transform="rotate(45 8.46447 7.05029)" fill="currentColor" />
+															</svg>
+														</span>
+														<!--end::Svg Icon-->
+													</button>
 												</div>
-												<!--end::Toolbar-->
-												<!--begin::Group actions-->
-												<div class="d-flex justify-content-end align-items-center d-none" data-kt-subscription-table-toolbar="selected">
-													<div class="fw-bold me-5">
-													<span class="me-2" data-kt-subscription-table-select="selected_count"></span>Selected</div>
-													<button type="button" class="btn btn-danger" data-kt-subscription-table-select="delete_selected">Delete Selected</button>
+												<!--end::Flatpickr-->
+												<div class="w-100 mw-150px">
+													<!--begin::Select2-->
+													<select class="form-select form-select-solid" data-control="select2" data-hide-search="true" data-placeholder="Status" data-kt-ecommerce-order-filter="status">
+														<option></option>
+														<option value="all">All</option>
+														<option value="미승인">미승인</option>
+														<option value="제작중">제작중</option>
+														<option value="제작완료">제작완료</option>
+														<option value="출고완료">출고완료</option>
+
+													</select>
+													<!--end::Select2-->
 												</div>
-												<!--end::Group actions-->
+												<!--begin::Add product-->
+												<!-- <a href="../../demo17/dist/apps/ecommerce/catalog/add-product.html" class="btn btn-primary">Add Order</a> -->
+												<!--end::Add product-->
 											</div>
 											<!--end::Card toolbar-->
 										</div>
+
 										<!--end::Header-->
 										<!--begin::Body-->
 										<!-- <div class="card-body py-3">
@@ -5379,13 +5304,10 @@ License: For each use you must have a valid license purchased only from above li
 
 										<div class="card-body py-3">
 											<!--begin::Table-->
-											<table class="table align-middle table-row-dashed fs-6 gy-5" id="kt_subscriptions_table">
+											<table class="table align-middle table-row-dashed fs-6 gy-5" id="kt_ecommerce_sales_table">
 												<!--begin::Table head-->
 												<thead>
 													<!--begin::Table row-->
-
-
-
 													<tr class="text-start text-gray-400 fw-bold fs-7 text-uppercase gs-0">
 														<th class="w-10px pe-2">
 															<div class="form-check form-check-sm form-check-custom form-check-solid me-3">
@@ -5393,31 +5315,30 @@ License: For each use you must have a valid license purchased only from above li
 															</div>
 														</th>
 														<th class="min-w-100px">Order ID</th>
-
-														<th class="min-w-70px">Status</th>
-														<th class="min-w-125px">거래처</th>
+														<th class="min-w-175px">거래처</th>
 
 														<!-- <th class="text-end min-w-100px">Total</th> -->
-														<th class="min-w-125px">발주일</th>
-														<th class="min-w-125px">납기일</th>
-
+														<th class="text-end min-w-100px">발주일</th>
+														<th class="text-end min-w-100px">납기일</th>
+														<th class="text-end min-w-70px">Status</th>
 														<th class="text-end min-w-100px">Actions</th>
 													</tr>
 													<!--end::Table row-->
 												</thead>
 												<!--end::Table head-->
 												<!--begin::Table body-->
-												<tbody>
+												<tbody class="fw-semibold text-gray-600">
+													<!--begin::Table row-->
+
 													<?php
 													include './ajax/databaselog.php';
 
-													$sql = "SELECT no,regist_no,write_date,due_date,product_status,B.acc_name FROM dbo.regist_table A LEFT OUTER JOIN account B ON a.acc_name = B.acc_no";
+													$sql = "SELECT * FROM dbo.regist_table";
 													$result = sqlsrv_query($con,$sql,$params,$options);
 													$total = sqlsrv_num_rows($result);
 
 													for ($i=0; $i < $total; $i++) {
 														$row = sqlsrv_fetch_array($result);
-														$no = $row['no'];
 														$regist_no = $row['regist_no'];
 														$acc_name = $row['acc_name'];
 														$write_date = $row['write_date'];
@@ -5425,6 +5346,7 @@ License: For each use you must have a valid license purchased only from above li
 
 														$product_status = $row['product_status'];
 													 ?>
+
 													<tr>
 														<!--begin::Checkbox-->
 														<td>
@@ -5433,30 +5355,46 @@ License: For each use you must have a valid license purchased only from above li
 															</div>
 														</td>
 														<!--end::Checkbox-->
+														<!--begin::Order ID=-->
+														<td data-kt-ecommerce-order-filter="order_id">
+															<a href="../../demo17/dist/apps/ecommerce/sales/details.html" class="text-gray-800 text-hover-primary fw-bold"><?=$regist_no?></a>
+														</td>
+														<!--end::Order ID=-->
 														<!--begin::Customer=-->
 														<td>
-															<a href="../../demo17/dist/apps/customers/view.html" class="text-gray-800 text-hover-primary mb-1"><?=$regist_no?></a>
+<a href="../../demo17/dist/apps/ecommerce/sales/details.html" class="text-gray-800 text-hover-primary fw-bold"><?=$acc_name?></a>
 														</td>
 														<!--end::Customer=-->
 														<!--begin::Status=-->
-														<td>
-															<div class="badge badge-light-success">Active</div>
-														</td>
+
 														<!--end::Status=-->
-														<!--begin::Billing=-->
-														<td>
-															<div class="badge badge-light"><?=$acc_name?></div>
+														<!--begin::Total=-->
+														<!-- <td class="text-end pe-0">
+															<span class="fw-bold">$430.00</span>
+														</td> -->
+														<!--end::Total=-->
+														<!--begin::Date Added=-->
+														<td class="text-end" data-order="2022-06-28">
+															<span class="fw-bold">06/19/2022</span>
 														</td>
-														<!--end::Billing=-->
-														<!--begin::Product=-->
-														<td><?=$write_date?></td>
-														<!--end::Product=-->
-														<!--begin::Date=-->
-														<td><?=$due_date?></td>
-														<!--end::Date=-->
+														<!--end::Date Added=-->
+														<!--begin::Date Modified=-->
+														<td class="text-end" data-order="2022-07-04">
+															<span class="fw-bold">07/18/2022</span>
+														</td>
+														<!--end::Date Modified=-->
 														<!--begin::Action=-->
+
+														<td class="text-end pe-0" data-order="미승인">
+															<!--begin::Badges-->
+															<div class="badge badge-light-danger">미승인</div>
+															<!--end::Badges-->
+														</td>
+
+
+
 														<td class="text-end">
-															<a href="#" class="btn btn-light btn-active-light-primary btn-sm" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">Actions
+															<a href="#" class="btn btn-sm btn-light btn-active-light-primary" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">Actions
 															<!--begin::Svg Icon | path: icons/duotune/arrows/arr072.svg-->
 															<span class="svg-icon svg-icon-5 m-0">
 																<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -5468,17 +5406,17 @@ License: For each use you must have a valid license purchased only from above li
 															<div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-semibold fs-7 w-125px py-4" data-kt-menu="true">
 																<!--begin::Menu item-->
 																<div class="menu-item px-3">
-																	<a href="../../intra/apps/create/list.php?data=<?=$regist_no?>" class="menu-link px-3">View</a>
+																	<a href="../../demo17/dist/apps/ecommerce/sales/details.html" class="menu-link px-3">View</a>
 																</div>
 																<!--end::Menu item-->
 																<!--begin::Menu item-->
 																<div class="menu-item px-3">
-																	<a href="../../intra/apps/create/modify.php?data=<?=$regist_no?>" class="menu-link px-3">Edit</a>
+																	<a href="../../demo17/dist/apps/ecommerce/sales/edit-order.html" class="menu-link px-3">Edit</a>
 																</div>
 																<!--end::Menu item-->
 																<!--begin::Menu item-->
 																<div class="menu-item px-3">
-																	<a href="#" data-kt-subscriptions-table-filter="delete_row" class="menu-link px-3">Delete</a>
+																	<a href="#" class="menu-link px-3" data-kt-ecommerce-order-filter="delete_row">Delete</a>
 																</div>
 																<!--end::Menu item-->
 															</div>
@@ -5486,9 +5424,11 @@ License: For each use you must have a valid license purchased only from above li
 														</td>
 														<!--end::Action=-->
 													</tr>
-														<?php } ?>
+
+												<?php } ?>
 												</tbody>
-												</table>
+												<!--end::Table body-->
+											</table>
 										<!--end::Body-->
 									</div>
 								</div>
@@ -9426,8 +9366,8 @@ License: For each use you must have a valid license purchased only from above li
 		<script src="assets/plugins/custom/datatables/datatables.bundle.js"></script>
 		<!--end::Vendors Javascript-->
 		<!--begin::Custom Javascript(used by this page)-->
-		<!-- <script src="assets/js/custom/apps/ecommerce/sales/listing.js"></script> -->
-		<script src="assets/js/custom/apps/subscriptions/list/list.js"></script>
+		<script src="assets/js/custom/apps/ecommerce/sales/listing.js"></script>
+
 		<script src="assets/js/widgets.bundle.js"></script>
 		<script src="assets/js/custom/widgets.js"></script>
 		<script src="assets/js/custom/apps/chat/chat.js"></script>

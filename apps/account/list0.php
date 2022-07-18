@@ -12,8 +12,8 @@ License: For each use you must have a valid license purchased only from above li
 -->
 <html lang="en">
 	<!--begin::Head-->
-	<head><base href="">
-		<title>MainHome</title>
+	<head><base href="../../">
+		<title>인트라락 | 거래처</title>
 		<meta charset="utf-8" />
 		<meta name="description" content="The most advanced Bootstrap Admin Theme on Themeforest trusted by 100,000 beginners and professionals. Multi-demo, Dark Mode, RTL support and complete React, Angular, Vue &amp; Laravel versions. Grab your copy now and get life-time updates for free." />
 		<meta name="keywords" content="Metronic, bootstrap, bootstrap 5, Angular, VueJs, React, Laravel, admin themes, web design, figma, web development, free templates, free admin themes, bootstrap theme, bootstrap template, bootstrap dashboard, bootstrap dak mode, bootstrap button, bootstrap datepicker, bootstrap timepicker, fullcalendar, datatables, flaticon" />
@@ -29,13 +29,52 @@ License: For each use you must have a valid license purchased only from above li
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" />
 		<!--end::Fonts-->
 		<!--begin::Vendor Stylesheets(used by this page)-->
-		<link href="assets/plugins/custom/fullcalendar/fullcalendar.bundle.css" rel="stylesheet" type="text/css" />
 		<link href="assets/plugins/custom/datatables/datatables.bundle.css" rel="stylesheet" type="text/css" />
 		<!--end::Vendor Stylesheets-->
 		<!--begin::Global Stylesheets Bundle(used by all pages)-->
 		<link href="assets/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
 		<link href="assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
 		<!--end::Global Stylesheets Bundle-->
+	<style media="screen">
+
+	.btn-tertiary {
+color: #555;
+padding: 0;
+line-height: 40px;
+width: 300px;
+margin: auto;
+display: block;
+border: 2px solid #555;
+}
+.btn-tertiary:hover, .btn-tertiary:focus {
+color: #888888;
+border-color: #888888;
+}
+
+/* input file style */
+.input-file {
+width: 0.1px;
+height: 0.1px;
+opacity: 0;
+overflow: hidden;
+position: absolute;
+z-index: -1;
+}
+.input-file + .js-labelFile {
+overflow: hidden;
+text-overflow: ellipsis;
+white-space: nowrap;
+padding: 0 10px;
+cursor: pointer;
+}
+.input-file + .js-labelFile .icon:before {
+content: "";
+}
+.input-file + .js-labelFile.has-file .icon:before {
+content: "";
+color: #5AAC7B;
+}
+	</style>
 	</head>
 	<!--end::Head-->
 	<!--begin::Body-->
@@ -63,7 +102,7 @@ License: For each use you must have a valid license purchased only from above li
 						<div id="kt_aside_menu_wrapper" class="w-100 hover-scroll-overlay-y scroll-ps d-flex" data-kt-scroll="true" data-kt-scroll-height="auto" data-kt-scroll-dependencies="#kt_aside_logo, #kt_aside_footer" data-kt-scroll-wrappers="#kt_aside, #kt_aside_menu" data-kt-scroll-offset="0">
 							<div id="kt_aside_menu" class="menu menu-column menu-rounded menu-title-gray-600 menu-state-primary menu-state-icon-primary menu-state-bullet-primary menu-icon-gray-400 menu-arrow-gray-400 fw-semibold fs-6" data-kt-menu="true">
 								<!--begin:Menu item-->
-								<div data-kt-menu-trigger="{default: 'click', lg: 'hover'}" data-kt-menu-placement="right-start" class="menu-item here show py-2">
+								<div data-kt-menu-trigger="{default: 'click', lg: 'hover'}" data-kt-menu-placement="right-start" class="menu-item py-2">
 									<!--begin:Menu link-->
 									<span class="menu-link menu-center">
 										<span class="menu-icon me-0">
@@ -94,7 +133,7 @@ License: For each use you must have a valid license purchased only from above li
 										<!--begin:Menu item-->
 										<div class="menu-item">
 											<!--begin:Menu link-->
-											<a class="menu-link active" href="../../demo17/dist/index.html">
+											<a class="menu-link" href="../../demo17/dist/index.html">
 												<span class="menu-bullet">
 													<span class="bullet bullet-dot"></span>
 												</span>
@@ -1840,7 +1879,7 @@ License: For each use you must have a valid license purchased only from above li
 								</div>
 								<!--end:Menu item-->
 								<!--begin:Menu item-->
-								<div data-kt-menu-trigger="{default: 'click', lg: 'hover'}" data-kt-menu-placement="right-start" class="menu-item py-2">
+								<div data-kt-menu-trigger="{default: 'click', lg: 'hover'}" data-kt-menu-placement="right-start" class="menu-item here show py-2">
 									<!--begin:Menu link-->
 									<span class="menu-link menu-center">
 										<span class="menu-icon me-0">
@@ -2702,7 +2741,7 @@ License: For each use you must have a valid license purchased only from above li
 										</div>
 										<!--end:Menu item-->
 										<!--begin:Menu item-->
-										<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+										<div data-kt-menu-trigger="click" class="menu-item here show menu-accordion">
 											<!--begin:Menu link-->
 											<span class="menu-link">
 												<span class="menu-icon">
@@ -2739,7 +2778,7 @@ License: For each use you must have a valid license purchased only from above li
 												<!--begin:Menu item-->
 												<div class="menu-item">
 													<!--begin:Menu link-->
-													<a class="menu-link" href="../../demo17/dist/apps/subscriptions/list.html">
+													<a class="menu-link active" href="../../demo17/dist/apps/subscriptions/list.html">
 														<span class="menu-bullet">
 															<span class="bullet bullet-dot"></span>
 														</span>
@@ -3257,6 +3296,258 @@ License: For each use you must have a valid license purchased only from above li
 					<!--end::Footer-->
 				</div>
 				<!--end::Aside-->
+
+				<div class="modal fade" id="kt_modal_upload" tabindex="-1" aria-hidden="true">
+					<!--begin::Modal dialog-->
+					<div class="modal-dialog modal-dialog-centered mw-650px">
+						<!--begin::Modal content-->
+						<div class="modal-content">
+							<!--begin::Form-->
+							<form class="form" action="none" id="kt_modal_upload_form">
+								<!--begin::Modal header-->
+								<div class="modal-header">
+									<!--begin::Modal title-->
+									<h2 class="fw-bold">Upload files</h2>
+									<!--end::Modal title-->
+									<!--begin::Close-->
+									<div class="btn btn-icon btn-sm btn-active-icon-primary" data-bs-dismiss="modal">
+										<!--begin::Svg Icon | path: icons/duotune/arrows/arr061.svg-->
+										<span class="svg-icon svg-icon-1">
+											<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<rect opacity="0.5" x="6" y="17.3137" width="16" height="2" rx="1" transform="rotate(-45 6 17.3137)" fill="currentColor" />
+												<rect x="7.41422" y="6" width="16" height="2" rx="1" transform="rotate(45 7.41422 6)" fill="currentColor" />
+											</svg>
+										</span>
+										<!--end::Svg Icon-->
+									</div>
+									<!--end::Close-->
+								</div>
+								<!--end::Modal header-->
+								<!--begin::Modal body-->
+								<div class="modal-body pt-10 pb-15 px-lg-17">
+									<!--begin::Input group-->
+									<div class="form-group">
+										<!--begin::Dropzone-->
+										<div class="dropzone dropzone-queue mb-2" id="kt_modal_upload_dropzone">
+											<!--begin::Controls-->
+											<div class="dropzone-panel mb-4">
+												<a class="dropzone-select btn btn-sm btn-primary me-2">Attach files</a>
+												<a class="dropzone-upload btn btn-sm btn-light-primary me-2">Upload All</a>
+												<a class="dropzone-remove-all btn btn-sm btn-light-primary">Remove All</a>
+											</div>
+											<!--end::Controls-->
+											<!--begin::Items-->
+											<div class="dropzone-items wm-200px">
+												<div class="dropzone-item p-5" style="display:none">
+													<!--begin::File-->
+													<div class="dropzone-file">
+														<div class="dropzone-filename text-dark" title="some_image_file_name.jpg">
+															<span data-dz-name="">some_image_file_name.jpg</span>
+															<strong>(
+															<span data-dz-size="">340kb</span>)</strong>
+														</div>
+														<div class="dropzone-error mt-0" data-dz-errormessage=""></div>
+													</div>
+													<!--end::File-->
+													<!--begin::Progress-->
+													<div class="dropzone-progress">
+														<div class="progress bg-light-primary">
+															<div class="progress-bar bg-primary" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" data-dz-uploadprogress=""></div>
+														</div>
+													</div>
+													<!--end::Progress-->
+													<!--begin::Toolbar-->
+													<div class="dropzone-toolbar">
+														<span class="dropzone-start">
+															<i class="bi bi-play-fill fs-3"></i>
+														</span>
+														<span class="dropzone-cancel" data-dz-remove="" style="display: none;">
+															<i class="bi bi-x fs-3"></i>
+														</span>
+														<span class="dropzone-delete" data-dz-remove="">
+															<i class="bi bi-x fs-1"></i>
+														</span>
+													</div>
+													<!--end::Toolbar-->
+												</div>
+											</div>
+											<!--end::Items-->
+										</div>
+										<!--end::Dropzone-->
+										<!--begin::Hint-->
+										<span class="form-text fs-6 text-muted">Max file size is 1MB per file.</span>
+										<!--end::Hint-->
+									</div>
+									<!--end::Input group-->
+								</div>
+								<!--end::Modal body-->
+							</form>
+							<!--end::Form-->
+						</div>
+					</div>
+				</div>
+				<div class="modal fade" id="kt_modal_new_target" tabindex="-1" aria-hidden="true">
+					<!--begin::Modal dialog-->
+					<div class="modal-dialog modal-dialog-centered mw-650px">
+						<!--begin::Modal content-->
+						<div class="modal-content rounded">
+							<!--begin::Modal header-->
+							<div class="modal-header pb-0 border-0 justify-content-end">
+								<!--begin::Close-->
+								<div class="btn btn-sm btn-icon btn-active-color-primary" data-bs-dismiss="modal">
+									<!--begin::Svg Icon | path: icons/duotune/arrows/arr061.svg-->
+									<span class="svg-icon svg-icon-1">
+										<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<rect opacity="0.5" x="6" y="17.3137" width="16" height="2" rx="1" transform="rotate(-45 6 17.3137)" fill="currentColor" />
+											<rect x="7.41422" y="6" width="16" height="2" rx="1" transform="rotate(45 7.41422 6)" fill="currentColor" />
+										</svg>
+									</span>
+									<!--end::Svg Icon-->
+								</div>
+								<!--end::Close-->
+							</div>
+							<!--begin::Modal header-->
+							<!--begin::Modal body-->
+							<div class="modal-body scroll-y px-10 px-lg-15 pt-0 pb-15">
+								<!--begin:Form-->
+								<form id="kt_modal_new_target_form" class="form" action="#">
+									<!--begin::Heading-->
+									<div class="mb-13 text-center">
+										<!--begin::Title-->
+										<h1 class="mb-3">거래처 정보 등록</h1>
+										<!--end::Title-->
+										<!--begin::Description-->
+										<div class="text-muted fw-semibold fs-5">거래처 정보를 입력한 후
+										<a href="#" class="fw-bold link-primary">확인해 주세요</a>.</div>
+										<!--end::Description-->
+									</div>
+									<!--end::Heading-->
+									<!--begin::Input group-->
+
+
+									<div class="d-flex flex-column mb-5 fv-row">
+										<!--begin::Label-->
+										<label class="required fs-5 fw-semibold mb-2">업체명</label>
+										<!--end::Label-->
+										<!--begin::Input-->
+										<input class="form-control form-control-solid" placeholder="" name="address1" id="acc_name" />
+										<!--end::Input-->
+									</div>
+
+
+
+									<div class="row mb-5">
+										<div class="col-md-6 fv-row">
+											<!--begin::Label-->
+											<label class="required fs-5 fw-semibold mb-2">사업자번호</label>
+											<!--end::Label-->
+											<!--begin::Input-->
+											<input type="text" class="form-control form-control-solid" placeholder="" name="" id="acc_bu_no"/>
+											<!--end::Input-->
+										</div>
+										<!--end::Col-->
+										<?php
+										include '../../ajax/databaselog.php';
+
+										$sql = "SELECT * FROM dbo.account_status";
+										$result = sqlsrv_query($con,$sql,$params,$options);
+
+										$total = sqlsrv_num_rows($result);
+
+
+
+										 ?>
+
+										<!--begin::Col-->
+										<div class="col-md-6 fv-row">
+											<!--end::Label-->
+											<label class="required fs-5 fw-semibold mb-2">업태</label>
+											<!--end::Label-->
+											<!--end::Input-->
+											<select name="timezone" data-hide-search="true" aria-label="Select a Timezone" data-control="select2" data-placeholder="date_period" class="form-select form-select-solid" id="acc_status">
+												<?php
+												for ($i=0; $i < $total; $i++) {
+													$row = sqlsrv_fetch_array($result);
+													$status_no = $row['status_no'];
+													$status_name = $row['status_name'];
+												 ?>
+												<option value="<?=$status_no?>"><?=$status_name?></option>
+
+											<?php } ?>
+											</select>
+											<!--end::Input-->
+										</div>
+									</div>
+
+									<div class="fv-row mb-7">
+										<!--begin::Label-->
+										<label class="fw-semibold fs-6 mb-2">주소</label>
+										<button type="button" class="btn btn-outline btn-outline-dashed btn-outline-primary btn-active-light-primary" onclick="open_address();">찾기
+										</button>
+										<!--end::Label-->
+										<!--begin::Input-->
+										<input type="text" name="user_name" id="address1"  class="form-control form-control-solid mb-3 mb-lg-0" placeholder="" value="" />
+										<!--end::Input-->
+									</div>
+
+									<div class="d-flex flex-column mb-5 fv-row">
+										<!--begin::Label-->
+										<label class=" fs-5 fw-semibold mb-2">상세 주소</label>
+										<!--end::Label-->
+										<!--begin::Input-->
+										<input class="form-control form-control-solid" placeholder="" name="address1" id="address2" />
+										<!--end::Input-->
+									</div>
+
+									<div class="row mb-15">
+										<div class="col-md-6 fv-row">
+											<!--begin::Label-->
+											<label class=" fs-5 fw-semibold mb-2">전화번호</label>
+											<!--end::Label-->
+											<!--begin::Input-->
+											<input type="text" class="form-control form-control-solid" id="acc_phone" placeholder="" name=""oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
+											<!--end::Input-->
+										</div>
+										<!--end::Col-->
+										<!--begin::Col-->
+										<div class="col-md-6 fv-row">
+											<!--end::Label-->
+											<label class=" fs-5 fw-semibold mb-2">FAX 번호</label>
+											<!--end::Label-->
+											<!--end::Input-->
+											<input type="text" class="form-control form-control-solid" id="acc_fax" placeholder="" name="" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
+											<!--end::Input-->
+										</div>
+
+										<div class="fv-row mb-10 mt-15" >
+
+											<input type="file" name="file" id="file" class="input-file">
+<label for="file" class="btn btn-tertiary js-labelFile">
+<i class="icon fa fa-check"></i>
+<span class="js-fileName">사업자 등록증</span>
+</label>
+
+											<!--end::Hint-->
+										</div>
+									</div>
+									<div class="text-center">
+										<button type="button"  class="btn btn-light me-3" onclick="cancel();">취소</button>
+										<button type="button"  class="btn btn-primary" onclick="insert();">
+											<span class="indicator-label">등록</span>
+											<span class="indicator-progress">Please wait...
+											<span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
+										</button>
+									</div>
+									<!--end::Actions-->
+								</form>
+								<!--end:Form-->
+							</div>
+							<!--end::Modal body-->
+						</div>
+						<!--end::Modal content-->
+					</div>
+					<!--end::Modal dialog-->
+				</div>
 				<!--begin::Wrapper-->
 				<div class="wrapper d-flex flex-column flex-row-fluid" id="kt_wrapper">
 					<!--begin::Header tablet and mobile-->
@@ -3294,9 +3585,10 @@ License: For each use you must have a valid license purchased only from above li
 							<div class="page-title d-flex flex-column align-items-start justify-content-center flex-wrap me-lg-20 py-3 py-lg-0 me-3">
 								<!--begin::Heading-->
 								<h1 class="d-flex flex-column text-dark fw-bold my-1">
-									<span class="fs-1">MainHome</span>
+									<span class="fs-1">거래처 관리</span>
 								</h1>
 								<!--end::Heading-->
+
 							</div>
 							<!--end::Page title=-->
 							<!--begin::Topbar-->
@@ -4871,633 +5163,348 @@ License: For each use you must have a valid license purchased only from above li
 					<div class="content d-flex flex-column flex-column-fluid" id="kt_content">
 						<!--begin::Container-->
 						<div class="container-xxl" id="kt_content_container">
-							<!--begin::Row-->
-							<div class="row g-5 g-xl-8">
-								<!--begin::Col-->
-								<div class="col-xl-4">
-									<!--begin::Misc Widget 1-->
-									<div class="row mb-5 mb-xl-8 g-5 g-xl-8">
-										<!--begin::Col-->
-										<div class="col-6">
-											<!--begin::Card-->
-											<div class="card card-stretch">
-												<!--begin::Link-->
-												<a href="#" class="btn btn-flex btn-text-gray-800 btn-icon-gray-400 btn-active-color-primary bg-body flex-column justfiy-content-start align-items-start text-start w-100 p-10" data-bs-toggle="modal" data-bs-target="#kt_modal_create_app">
-													<!--begin::Svg Icon | path: icons/duotune/ecommerce/ecm007.svg-->
-													<span class="svg-icon svg-icon-3x mb-5">
-														<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-															<path d="M21 9V11C21 11.6 20.6 12 20 12H14V8H20C20.6 8 21 8.4 21 9ZM10 8H4C3.4 8 3 8.4 3 9V11C3 11.6 3.4 12 4 12H10V8Z" fill="currentColor" />
-															<path d="M15 2C13.3 2 12 3.3 12 5V8H15C16.7 8 18 6.7 18 5C18 3.3 16.7 2 15 2Z" fill="currentColor" />
-															<path opacity="0.3" d="M9 2C10.7 2 12 3.3 12 5V8H9C7.3 8 6 6.7 6 5C6 3.3 7.3 2 9 2ZM4 12V21C4 21.6 4.4 22 5 22H10V12H4ZM20 12V21C20 21.6 19.6 22 19 22H14V12H20Z" fill="currentColor" />
-														</svg>
-													</span>
-													<!--end::Svg Icon-->
-													<span class="fs-4 fw-bold">등록</span>
-												</a>
-												<!--end::Link-->
-											</div>
-											<!--end::Card-->
+							<!--begin::Card-->
+							<div class="card">
+								<!--begin::Card header-->
+								<div class="card-header border-0 pt-6">
+									<!--begin::Card title-->
+									<div class="card-title">
+										<!--begin::Search-->
+										<div class="d-flex align-items-center position-relative my-1">
+											<!--begin::Svg Icon | path: icons/duotune/general/gen021.svg-->
+											<span class="svg-icon svg-icon-1 position-absolute ms-6">
+												<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<rect opacity="0.5" x="17.0365" y="15.1223" width="8.15546" height="2" rx="1" transform="rotate(45 17.0365 15.1223)" fill="currentColor" />
+													<path d="M11 19C6.55556 19 3 15.4444 3 11C3 6.55556 6.55556 3 11 3C15.4444 3 19 6.55556 19 11C19 15.4444 15.4444 19 11 19ZM11 5C7.53333 5 5 7.53333 5 11C5 14.4667 7.53333 17 11 17C14.4667 17 17 14.4667 17 11C17 7.53333 14.4667 5 11 5Z" fill="currentColor" />
+												</svg>
+											</span>
+											<!--end::Svg Icon-->
+											<input type="text" data-kt-subscription-table-filter="search" class="form-control form-control-solid w-250px ps-14" placeholder="Search Subscriptions" />
 										</div>
-										<!--end::Col-->
-										<!--begin::Col-->
-										<div class="col-6">
-											<!--begin::Card-->
-											<div class="card card-stretch">
-												<!--begin::Link-->
-												<a href="../../demo17/dist/account/statements.html" class="btn btn-flex btn-text-gray-800 btn-icon-gray-400 btn-active-color-primary bg-body flex-column justfiy-content-start align-items-start text-start w-100 p-10">
-													<!--begin::Svg Icon | path: icons/duotune/technology/teh008.svg-->
-													<span class="svg-icon svg-icon-3x mb-5">
-														<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-															<path opacity="0.3" d="M11 6.5C11 9 9 11 6.5 11C4 11 2 9 2 6.5C2 4 4 2 6.5 2C9 2 11 4 11 6.5ZM17.5 2C15 2 13 4 13 6.5C13 9 15 11 17.5 11C20 11 22 9 22 6.5C22 4 20 2 17.5 2ZM6.5 13C4 13 2 15 2 17.5C2 20 4 22 6.5 22C9 22 11 20 11 17.5C11 15 9 13 6.5 13ZM17.5 13C15 13 13 15 13 17.5C13 20 15 22 17.5 22C20 22 22 20 22 17.5C22 15 20 13 17.5 13Z" fill="currentColor" />
-															<path d="M17.5 16C17.5 16 17.4 16 17.5 16L16.7 15.3C16.1 14.7 15.7 13.9 15.6 13.1C15.5 12.4 15.5 11.6 15.6 10.8C15.7 9.99999 16.1 9.19998 16.7 8.59998L17.4 7.90002H17.5C18.3 7.90002 19 7.20002 19 6.40002C19 5.60002 18.3 4.90002 17.5 4.90002C16.7 4.90002 16 5.60002 16 6.40002V6.5L15.3 7.20001C14.7 7.80001 13.9 8.19999 13.1 8.29999C12.4 8.39999 11.6 8.39999 10.8 8.29999C9.99999 8.19999 9.20001 7.80001 8.60001 7.20001L7.89999 6.5V6.40002C7.89999 5.60002 7.19999 4.90002 6.39999 4.90002C5.59999 4.90002 4.89999 5.60002 4.89999 6.40002C4.89999 7.20002 5.59999 7.90002 6.39999 7.90002H6.5L7.20001 8.59998C7.80001 9.19998 8.19999 9.99999 8.29999 10.8C8.39999 11.5 8.39999 12.3 8.29999 13.1C8.19999 13.9 7.80001 14.7 7.20001 15.3L6.5 16H6.39999C5.59999 16 4.89999 16.7 4.89999 17.5C4.89999 18.3 5.59999 19 6.39999 19C7.19999 19 7.89999 18.3 7.89999 17.5V17.4L8.60001 16.7C9.20001 16.1 9.99999 15.7 10.8 15.6C11.5 15.5 12.3 15.5 13.1 15.6C13.9 15.7 14.7 16.1 15.3 16.7L16 17.4V17.5C16 18.3 16.7 19 17.5 19C18.3 19 19 18.3 19 17.5C19 16.7 18.3 16 17.5 16Z" fill="currentColor" />
-														</svg>
-													</span>
-													<!--end::Svg Icon-->
-													<span class="fs-4 fw-bold">생산현황</span>
-												</a>
-												<!--end::Link-->
-											</div>
-											<!--end::Card-->
-										</div>
-										<!--end::Col-->
-
-										<!--begin::Col-->
-										<div class="col-6">
-											<!--begin::Card-->
-											<div class="card card-stretch">
-												<!--begin::Link-->
-												<a href="./apps/account/list.php" class="btn btn-flex btn-text-gray-800 btn-icon-gray-400 btn-active-color-primary bg-body flex-column justfiy-content-start align-items-start text-start w-100 p-10">
-													<!--begin::Svg Icon | path: icons/duotune/abstract/abs038.svg-->
-													<span class="svg-icon svg-icon-3x mb-5">
-														<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-															<path d="M12.0444 17.9444V12.1444L17.0444 15.0444C18.6444 15.9444 19.1445 18.0444 18.2445 19.6444C17.3445 21.2444 15.2445 21.7444 13.6445 20.8444C12.6445 20.2444 12.0444 19.1444 12.0444 17.9444ZM7.04445 15.0444L12.0444 12.1444L7.04445 9.24445C5.44445 8.34445 3.44444 8.84445 2.44444 10.4444C1.54444 12.0444 2.04445 14.0444 3.64445 15.0444C4.74445 15.6444 6.04445 15.6444 7.04445 15.0444ZM12.0444 6.34444V12.1444L17.0444 9.24445C18.6444 8.34445 19.1445 6.24444 18.2445 4.64444C17.3445 3.04444 15.2445 2.54445 13.6445 3.44445C12.6445 4.04445 12.0444 5.14444 12.0444 6.34444Z" fill="currentColor" />
-															<path opacity="0.3" d="M7.04443 9.24445C6.04443 8.64445 5.34442 7.54444 5.34442 6.34444C5.34442 4.54444 6.84444 3.04443 8.64444 3.04443C10.4444 3.04443 11.9444 4.54444 11.9444 6.34444V12.1444L7.04443 9.24445ZM17.0444 15.0444C18.0444 15.6444 19.3444 15.6444 20.3444 15.0444C21.9444 14.1444 22.4444 12.0444 21.5444 10.4444C20.6444 8.84444 18.5444 8.34445 16.9444 9.24445L11.9444 12.1444L17.0444 15.0444ZM7.04443 15.0444C6.04443 15.6444 5.34442 16.7444 5.34442 17.9444C5.34442 19.7444 6.84444 21.2444 8.64444 21.2444C10.4444 21.2444 11.9444 19.7444 11.9444 17.9444V12.1444L7.04443 15.0444Z" fill="currentColor" />
-														</svg>
-													</span>
-													<!--end::Svg Icon-->
-													<span class="fs-4 fw-bold">거래처</span>
-												</a>
-												<!--end::Link-->
-											</div>
-											<!--end::Card-->
-										</div>
-										<!--end::Col-->
-										<!--begin::Col-->
-										<div class="col-6">
-											<!--begin::Card-->
-											<div class="card card-stretch">
-												<!--begin::Link-->
-												<a href="../../demo17/dist/apps/chat/private.html" class="btn btn-flex btn-text-gray-800 btn-icon-gray-400 btn-active-color-primary bg-body flex-column justfiy-content-start align-items-start text-start w-100 p-10">
-													<!--begin::Svg Icon | path: icons/duotune/general/gen013.svg-->
-													<span class="svg-icon svg-icon-3x mb-5">
-														<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-															<path opacity="0.3" d="M20.9 12.9C20.3 12.9 19.9 12.5 19.9 11.9C19.9 11.3 20.3 10.9 20.9 10.9H21.8C21.3 6.2 17.6 2.4 12.9 2V2.9C12.9 3.5 12.5 3.9 11.9 3.9C11.3 3.9 10.9 3.5 10.9 2.9V2C6.19999 2.5 2.4 6.2 2 10.9H2.89999C3.49999 10.9 3.89999 11.3 3.89999 11.9C3.89999 12.5 3.49999 12.9 2.89999 12.9H2C2.5 17.6 6.19999 21.4 10.9 21.8V20.9C10.9 20.3 11.3 19.9 11.9 19.9C12.5 19.9 12.9 20.3 12.9 20.9V21.8C17.6 21.3 21.4 17.6 21.8 12.9H20.9Z" fill="currentColor" />
-															<path d="M16.9 10.9H13.6C13.4 10.6 13.2 10.4 12.9 10.2V5.90002C12.9 5.30002 12.5 4.90002 11.9 4.90002C11.3 4.90002 10.9 5.30002 10.9 5.90002V10.2C10.6 10.4 10.4 10.6 10.2 10.9H9.89999C9.29999 10.9 8.89999 11.3 8.89999 11.9C8.89999 12.5 9.29999 12.9 9.89999 12.9H10.2C10.4 13.2 10.6 13.4 10.9 13.6V13.9C10.9 14.5 11.3 14.9 11.9 14.9C12.5 14.9 12.9 14.5 12.9 13.9V13.6C13.2 13.4 13.4 13.2 13.6 12.9H16.9C17.5 12.9 17.9 12.5 17.9 11.9C17.9 11.3 17.5 10.9 16.9 10.9Z" fill="currentColor" />
-														</svg>
-													</span>
-													<!--end::Svg Icon-->
-													<span class="fs-4 fw-bold">품목</span>
-												</a>
-												<!--end::Link-->
-											</div>
-											<!--end::Card-->
-										</div>
-										<!--end::Col-->
+										<!--end::Search-->
 									</div>
-									<!--end::Misc Widget 1-->
-									<!--begin::List Widget 5-->
-									<div class="card mb-5 mb-xl-8">
-										<!--begin::Header-->
-										<div class="card-header align-items-center border-0 mt-4">
-											<h3 class="card-title align-items-start flex-column">
-												<span class="fw-bold mb-2 text-dark">Activities</span>
-												<!-- <span class="text-muted fw-semibold fs-7">890,344 Sales</span> -->
-											</h3>
-
-										</div>
-										<!--end::Header-->
-										<!--begin::Body-->
-										<div class="card-body pt-5">
-											<!--begin::Timeline-->
-											<div class="timeline-label">
-												<!--begin::Item-->
-												<div class="timeline-item">
-													<!--begin::Label-->
-													<div class="timeline-label fw-bold text-gray-800 fs-6">08:42</div>
-													<!--end::Label-->
-													<!--begin::Badge-->
-													<div class="timeline-badge">
-														<i class="fa fa-genderless text-warning fs-1"></i>
-													</div>
-													<!--end::Badge-->
-													<!--begin::Text-->
-													<div class="fw-mormal timeline-content text-muted ps-3">Login</div>
-													<!--end::Text-->
+									<!--begin::Card title-->
+									<!--begin::Card toolbar-->
+									<div class="card-toolbar">
+										<!--begin::Toolbar-->
+										<div class="d-flex justify-content-end" data-kt-subscription-table-toolbar="base">
+											<!--begin::Filter-->
+											<button type="button" class="btn btn-light-primary me-3" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">
+											<!--begin::Svg Icon | path: icons/duotune/general/gen031.svg-->
+											<span class="svg-icon svg-icon-2">
+												<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M19.0759 3H4.72777C3.95892 3 3.47768 3.83148 3.86067 4.49814L8.56967 12.6949C9.17923 13.7559 9.5 14.9582 9.5 16.1819V19.5072C9.5 20.2189 10.2223 20.7028 10.8805 20.432L13.8805 19.1977C14.2553 19.0435 14.5 18.6783 14.5 18.273V13.8372C14.5 12.8089 14.8171 11.8056 15.408 10.964L19.8943 4.57465C20.3596 3.912 19.8856 3 19.0759 3Z" fill="currentColor" />
+												</svg>
+											</span>
+											<!--end::Svg Icon-->Filter</button>
+											<!--begin::Menu 1-->
+											<div class="menu menu-sub menu-sub-dropdown w-300px w-md-325px" data-kt-menu="true">
+												<!--begin::Header-->
+												<div class="px-7 py-5">
+													<div class="fs-5 text-dark fw-bold">Filter Options</div>
 												</div>
-												<!--end::Item-->
-												<!--begin::Item-->
-												<div class="timeline-item">
-													<!--begin::Label-->
-													<div class="timeline-label fw-bold text-gray-800 fs-6">10:00</div>
-													<!--end::Label-->
-													<!--begin::Badge-->
-													<div class="timeline-badge">
-														<i class="fa fa-genderless text-success fs-1"></i>
-													</div>
-													<!--end::Badge-->
-													<!--begin::Content-->
-													<div class="timeline-content d-flex">
-														<span class="fw-bold text-gray-800 ps-3">생산의뢰서 등록</span>
-													</div>
-													<!--end::Content-->
-												</div>
-												<!--end::Item-->
-												<!--begin::Item-->
-												<div class="timeline-item">
-													<!--begin::Label-->
-													<div class="timeline-label fw-bold text-gray-800 fs-6">14:37</div>
-													<!--end::Label-->
-													<!--begin::Badge-->
-													<div class="timeline-badge">
-														<i class="fa fa-genderless text-danger fs-1"></i>
-													</div>
-													<!--end::Badge-->
-													<!--begin::Desc-->
-													<div class="timeline-content fw-bold text-gray-800 ps-3">
-														<span class="fw-bold text-gray-800 ps-3">생산의뢰서 등록</span>
-												</div>
-													<!--end::Desc-->
-												</div>
-												<!--end::Item-->
-												<!--begin::Item-->
-												<div class="timeline-item">
-													<!--begin::Label-->
-													<div class="timeline-label fw-bold text-gray-800 fs-6">16:50</div>
-													<!--end::Label-->
-													<!--begin::Badge-->
-													<div class="timeline-badge">
-														<i class="fa fa-genderless text-primary fs-1"></i>
-													</div>
-													<!--end::Badge-->
-													<!--begin::Text-->
-													<div class="timeline-content fw-mormal text-muted ps-3">Indulging in poorly driving and keep structure keep great</div>
-													<!--end::Text-->
-												</div>
-												<!--end::Item-->
-												<!--begin::Item-->
-												<div class="timeline-item">
-													<!--begin::Label-->
-													<div class="timeline-label fw-bold text-gray-800 fs-6">21:03</div>
-													<!--end::Label-->
-													<!--begin::Badge-->
-													<div class="timeline-badge">
-														<i class="fa fa-genderless text-danger fs-1"></i>
-													</div>
-													<!--end::Badge-->
-													<!--begin::Desc-->
-													<div class="timeline-content fw-semibold text-gray-800 ps-3">New order placed
-													<a href="#" class="text-primary">#XF-2356</a>.</div>
-													<!--end::Desc-->
-												</div>
-												<!--end::Item-->
-												<!--begin::Item-->
-												<div class="timeline-item">
-													<!--begin::Label-->
-													<div class="timeline-label fw-bold text-gray-800 fs-6">16:50</div>
-													<!--end::Label-->
-													<!--begin::Badge-->
-													<div class="timeline-badge">
-														<i class="fa fa-genderless text-primary fs-1"></i>
-													</div>
-													<!--end::Badge-->
-													<!--begin::Text-->
-													<div class="timeline-content fw-mormal text-muted ps-3">Indulging in poorly driving and keep structure keep great</div>
-													<!--end::Text-->
-												</div>
-												<!--end::Item-->
-												<!--begin::Item-->
-												<div class="timeline-item">
-													<!--begin::Label-->
-													<div class="timeline-label fw-bold text-gray-800 fs-6">21:03</div>
-													<!--end::Label-->
-													<!--begin::Badge-->
-													<div class="timeline-badge">
-														<i class="fa fa-genderless text-danger fs-1"></i>
-													</div>
-													<!--end::Badge-->
-													<!--begin::Desc-->
-													<div class="timeline-content fw-semibold text-gray-800 ps-3">New order placed
-													<a href="#" class="text-primary">#XF-2356</a>.</div>
-													<!--end::Desc-->
-												</div>
-												<!--end::Item-->
-												<!--begin::Item-->
-												<div class="timeline-item mb-9">
-													<!--begin::Label-->
-													<div class="timeline-label fw-bold text-gray-800 fs-6">10:30</div>
-													<!--end::Label-->
-													<!--begin::Badge-->
-													<div class="timeline-badge">
-														<i class="fa fa-genderless text-success fs-1"></i>
-													</div>
-													<!--end::Badge-->
-													<!--begin::Text-->
-													<div class="timeline-content fw-mormal text-muted ps-3">Finance KPI Mobile app launch preparion meeting</div>
-													<!--end::Text-->
-												</div>
-												<!--end::Item-->
-											</div>
-											<!--end::Timeline-->
-										</div>
-										<!--end: Card Body-->
-									</div>
-									<!--end: List Widget 5-->
-									<!--begin::List Widget 4-->
-									<div class="card mb-5 mb-xl-8">
+												<!--end::Header-->
+												<!--begin::Separator-->
+												<div class="separator border-gray-200"></div>
+												<!--end::Separator-->
+												<!--begin::Content-->
+												<div class="px-7 py-5" data-kt-subscription-table-filter="form">
+													<!--begin::Input group-->
 
+													<!--end::Input group-->
+													<!--begin::Input group-->
+													<div class="mb-10">
+														<label class="form-label fs-6 fw-semibold">업태:</label>
+														<select class="form-select form-select-solid fw-bold" data-kt-select2="true" data-placeholder="Select option" data-allow-clear="true" data-kt-subscription-table-filter="billing" data-hide-search="true">
+															<option></option>
 
-										<!--end::Body-->
-									</div>
-									<!--end::List Widget 4-->
-								</div>
-								<!--end::Col-->
-								<!--begin::Col-->
-								<div class="col-xl-8 ps-xl-12">
+															<?php
+															$sql = "SELECT * FROM dbo.account_status";
+															$result = sqlsrv_query($con,$sql,$params,$options);
 
-									<div class="card mb-xl-8">
-										<!--begin::Header-->
-										<div class="card-header border-0 pt-5">
-											<h3 class="card-title align-items-start flex-column">
-												<span class="card-label fw-bold fs-3 mb-1">공지사항</span>
-												<!-- <span class="text-muted mt-1 fw-semibold fs-7">More than 400 new products</span> -->
-											</h3>
+															$total = sqlsrv_num_rows($result);
+															for ($i=0; $i < $total; $i++) {
+																$row = sqlsrv_fetch_array($result);
+																$status_no = $row['status_no'];
+																$status_name = $row['status_name'];
+															 ?>
+															<option value="<?=$status_name?>"><?=$status_name?></option>
 
-										</div>
-
-
-										<div class="card-body py-3">
-
-													<div class="table-responsive">
-														<!--begin::Table-->
-														<table class="table table-row-dashed table-row-gray-200 align-middle gs-0 gy-4" id="example2">
-															<!--begin::Table head-->
-															<thead>
-																<tr class="border-0">
-																	<th class="p-0 w-50px"></th>
-																	<th class="p-0 min-w-150px"></th>
-																	<th class="p-0 min-w-140px"></th>
-																	<th class="p-0 min-w-110px"></th>
-																	<th class="p-0 min-w-50px"></th>
-																</tr>
-															</thead>
-
-															<tbody>
-
-
-																<tr>
-																	<td>
-																		<div class="symbol symbol-45px me-2">
-																			<span class="symbol-label">
-																				<img src="assets/media/svg/brand-logos/plurk.svg" class="h-50 align-self-center" alt="" />
-																			</span>
-																		</div>
-																	</td>
-																	<td>
-																		<a href="#" class="text-dark fw-bold text-hover-primary mb-1 fs-6">Brad Simmons</a>
-																		<span class="text-muted fw-semibold d-block">Movie Creator</span>
-																	</td>
-																	<td class="text-end text-muted fw-bold">React, HTML</td>
-																	<td class="text-end">
-																		<span class="badge badge-light-success">Approved</span>
-																	</td>
-																	<td class="text-end">
-																		<a href="#" class="btn btn-sm btn-icon btn-bg-light btn-active-color-primary">
-																			<!--begin::Svg Icon | path: icons/duotune/arrows/arr064.svg-->
-																			<span class="svg-icon svg-icon-2">
-																				<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-																					<rect opacity="0.5" x="18" y="13" width="13" height="2" rx="1" transform="rotate(-180 18 13)" fill="currentColor" />
-																					<path d="M15.4343 12.5657L11.25 16.75C10.8358 17.1642 10.8358 17.8358 11.25 18.25C11.6642 18.6642 12.3358 18.6642 12.75 18.25L18.2929 12.7071C18.6834 12.3166 18.6834 11.6834 18.2929 11.2929L12.75 5.75C12.3358 5.33579 11.6642 5.33579 11.25 5.75C10.8358 6.16421 10.8358 6.83579 11.25 7.25L15.4343 11.4343C15.7467 11.7467 15.7467 12.2533 15.4343 12.5657Z" fill="currentColor" />
-																				</svg>
-																			</span>
-																			<!--end::Svg Icon-->
-																		</a>
-																	</td>
-																</tr>
-
-
-
-																<tr>
-																	<td>
-																		<div class="symbol symbol-45px me-2">
-																			<span class="symbol-label">
-																				<img src="assets/media/svg/brand-logos/plurk.svg" class="h-50 align-self-center" alt="" />
-																			</span>
-																		</div>
-																	</td>
-																	<td>
-																		<a href="#" class="text-dark fw-bold text-hover-primary mb-1 fs-6">Brad Simmons</a>
-																		<span class="text-muted fw-semibold d-block">Movie Creator</span>
-																	</td>
-																	<td class="text-end text-muted fw-bold">React, HTML</td>
-																	<td class="text-end">
-																		<span class="badge badge-light-success">Approved</span>
-																	</td>
-																	<td class="text-end">
-																		<a href="#" class="btn btn-sm btn-icon btn-bg-light btn-active-color-primary">
-																			<!--begin::Svg Icon | path: icons/duotune/arrows/arr064.svg-->
-																			<span class="svg-icon svg-icon-2">
-																				<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-																					<rect opacity="0.5" x="18" y="13" width="13" height="2" rx="1" transform="rotate(-180 18 13)" fill="currentColor" />
-																					<path d="M15.4343 12.5657L11.25 16.75C10.8358 17.1642 10.8358 17.8358 11.25 18.25C11.6642 18.6642 12.3358 18.6642 12.75 18.25L18.2929 12.7071C18.6834 12.3166 18.6834 11.6834 18.2929 11.2929L12.75 5.75C12.3358 5.33579 11.6642 5.33579 11.25 5.75C10.8358 6.16421 10.8358 6.83579 11.25 7.25L15.4343 11.4343C15.7467 11.7467 15.7467 12.2533 15.4343 12.5657Z" fill="currentColor" />
-																				</svg>
-																			</span>
-																			<!--end::Svg Icon-->
-																		</a>
-																	</td>
-																</tr>
-															</tbody>
-															<!--end::Table body-->
-														</table>
-													</div>
-													<!--end::Table-->
-												</div>
-
-
-
-	<br>
-									</div>
-
-
-
-									<!--begin::Row-->
-
-									<!--end::Row-->
-									<!--begin::Tables Widget 5-->
-									<div class="card mb-xl-8">
-
-										<div class="card-header border-0 pt-6">
-											<!--begin::Card title-->
-											<div class="card-title">
-												<!--begin::Search-->
-												<div class="d-flex align-items-center position-relative my-1">
-													<!--begin::Svg Icon | path: icons/duotune/general/gen021.svg-->
-													<span class="svg-icon svg-icon-1 position-absolute ms-6">
-														<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-															<rect opacity="0.5" x="17.0365" y="15.1223" width="8.15546" height="2" rx="1" transform="rotate(45 17.0365 15.1223)" fill="currentColor" />
-															<path d="M11 19C6.55556 19 3 15.4444 3 11C3 6.55556 6.55556 3 11 3C15.4444 3 19 6.55556 19 11C19 15.4444 15.4444 19 11 19ZM11 5C7.53333 5 5 7.53333 5 11C5 14.4667 7.53333 17 11 17C14.4667 17 17 14.4667 17 11C17 7.53333 14.4667 5 11 5Z" fill="currentColor" />
-														</svg>
-													</span>
-													<!--end::Svg Icon-->
-													<input type="text" data-kt-subscription-table-filter="search" class="form-control form-control-solid w-250px ps-14" placeholder="Searching..." />
-												</div>
-												<!--end::Search-->
-											</div>
-											<!--begin::Card title-->
-											<!--begin::Card toolbar-->
-											<div class="card-toolbar">
-												<!--begin::Toolbar-->
-												<div class="d-flex justify-content-end" data-kt-subscription-table-toolbar="base">
-													<!--begin::Filter-->
-													<button type="button" class="btn btn-light-primary me-3" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">
-													<!--begin::Svg Icon | path: icons/duotune/general/gen031.svg-->
-													<span class="svg-icon svg-icon-2">
-														<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-															<path d="M19.0759 3H4.72777C3.95892 3 3.47768 3.83148 3.86067 4.49814L8.56967 12.6949C9.17923 13.7559 9.5 14.9582 9.5 16.1819V19.5072C9.5 20.2189 10.2223 20.7028 10.8805 20.432L13.8805 19.1977C14.2553 19.0435 14.5 18.6783 14.5 18.273V13.8372C14.5 12.8089 14.8171 11.8056 15.408 10.964L19.8943 4.57465C20.3596 3.912 19.8856 3 19.0759 3Z" fill="currentColor" />
-														</svg>
-													</span>
-													<!--end::Svg Icon-->Filter</button>
-													<!--begin::Menu 1-->
-													<div class="menu menu-sub menu-sub-dropdown w-300px w-md-325px" data-kt-menu="true">
-														<!--begin::Header-->
-														<div class="px-7 py-5">
-															<div class="fs-5 text-dark fw-bold">Filter Options</div>
-														</div>
-														<!--end::Header-->
-														<!--begin::Separator-->
-														<div class="separator border-gray-200"></div>
-														<!--end::Separator-->
-														<!--begin::Content-->
-														<div class="px-7 py-5" data-kt-subscription-table-filter="form">
-															<!--begin::Input group-->
-															<div class="mb-10">
-																<label class="form-label fs-6 fw-semibold">납기일:</label>
-																<select class="form-select form-select-solid fw-bold" data-kt-select2="true" data-placeholder="Select option" data-allow-clear="true" data-kt-subscription-table-filter="month" data-hide-search="true">
-																	<option></option>
-																	<option value="-01-">1월</option>
-																	<option value="-02-">2월</option>
-																	<option value="-03-">3월</option>
-																	<option value="-04-">4월</option>
-																	<option value="-05-">5월</option>
-																	<option value="-06-">6월</option>
-																	<option value="-07-">7월</option>
-																	<option value="-08-">8월</option>
-																	<option value="-09-">9월</option>
-																	<option value="-10-">10월</option>
-																	<option value="-11-">11월</option>
-																	<option value="-12-">12월</option>
-																</select>
-															</div>
-															<!--end::Input group-->
-															<!--begin::Input group-->
-															<div class="mb-10">
-																<label class="form-label fs-6 fw-semibold">Status:</label>
-																<select class="form-select form-select-solid fw-bold" data-kt-select2="true" data-placeholder="Select option" data-allow-clear="true" data-kt-subscription-table-filter="status" data-hide-search="true">
-																	<option></option>
-																	<option value="Active">Active</option>
-																	<option value="Expiring">Expiring</option>
-																	<option value="Suspended">Suspended</option>
-																</select>
-															</div>
-															<!--end::Input group-->
-															<!--begin::Input group-->
-															<!-- <div class="mb-10">
-																<label class="form-label fs-6 fw-semibold">Billing Method:</label>
-																<select class="form-select form-select-solid fw-bold" data-kt-select2="true" data-placeholder="Select option" data-allow-clear="true" data-kt-subscription-table-filter="billing" data-hide-search="true">
-																	<option></option>
-																	<option value="Auto-debit">Auto-debit</option>
-																	<option value="Manual - Credit Card">Manual - Credit Card</option>
-																	<option value="Manual - Cash">Manual - Cash</option>
-																	<option value="Manual - Paypal">Manual - Paypal</option>
-																</select>
-															</div> -->
-															<!--end::Input group-->
-															<!--begin::Input group-->
-															<div class="mb-10">
-																<label class="form-label fs-6 fw-semibold">발주일:</label>
-																<select class="form-select form-select-solid fw-bold" data-kt-select2="true" data-placeholder="Select option" data-allow-clear="true" data-kt-subscription-table-filter="product" data-hide-search="true">
-																	<option></option>
-																	<option value="-01-">1월</option>
-																	<option value="-02-">2월</option>
-																	<option value="-03-">3월</option>
-																	<option value="-04-">4월</option>
-																	<option value="-05-">5월</option>
-																	<option value="-06-">6월</option>
-																	<option value="-07-">7월</option>
-																	<option value="-08-">8월</option>
-																	<option value="-09-">9월</option>
-																	<option value="-10-">10월</option>
-																	<option value="-11-">11월</option>
-																	<option value="-12-">12월</option>
-																</select>
-															</div>
-															<!--end::Input group-->
-															<!--begin::Actions-->
-															<div class="d-flex justify-content-end">
-																<button type="reset" class="btn btn-light btn-active-light-primary fw-semibold me-2 px-6" data-kt-menu-dismiss="true" data-kt-subscription-table-filter="reset">Reset</button>
-																<button type="submit" class="btn btn-primary fw-semibold px-6" data-kt-menu-dismiss="true" data-kt-subscription-table-filter="filter">Apply</button>
-															</div>
-															<!--end::Actions-->
-														</div>
-														<!--end::Content-->
-													</div>
-													<!--end::Menu 1-->
-													<!--end::Filter-->
-
-													<!--end::Export-->
-													<!--begin::Add subscription-->
-
-													<!--end::Add subscription-->
-												</div>
-												<!--end::Toolbar-->
-												<!--begin::Group actions-->
-												<div class="d-flex justify-content-end align-items-center d-none" data-kt-subscription-table-toolbar="selected">
-													<div class="fw-bold me-5">
-													<span class="me-2" data-kt-subscription-table-select="selected_count"></span>Selected</div>
-													<button type="button" class="btn btn-danger" data-kt-subscription-table-select="delete_selected">Delete Selected</button>
-												</div>
-												<!--end::Group actions-->
-											</div>
-											<!--end::Card toolbar-->
-										</div>
-										<!--end::Header-->
-										<!--begin::Body-->
-										<!-- <div class="card-body py-3">
-					이기엽
-										</div> -->
-
-
-
-										<div class="card-body py-3">
-											<!--begin::Table-->
-											<table class="table align-middle table-row-dashed fs-6 gy-5" id="kt_subscriptions_table">
-												<!--begin::Table head-->
-												<thead>
-													<!--begin::Table row-->
-
-
-
-													<tr class="text-start text-gray-400 fw-bold fs-7 text-uppercase gs-0">
-														<th class="w-10px pe-2">
-															<div class="form-check form-check-sm form-check-custom form-check-solid me-3">
-																<input class="form-check-input" type="checkbox" data-kt-check="true" data-kt-check-target="#kt_ecommerce_sales_table .form-check-input" value="1" />
-															</div>
-														</th>
-														<th class="min-w-100px">Order ID</th>
-
-														<th class="min-w-70px">Status</th>
-														<th class="min-w-125px">거래처</th>
-
-														<!-- <th class="text-end min-w-100px">Total</th> -->
-														<th class="min-w-125px">발주일</th>
-														<th class="min-w-125px">납기일</th>
-
-														<th class="text-end min-w-100px">Actions</th>
-													</tr>
-													<!--end::Table row-->
-												</thead>
-												<!--end::Table head-->
-												<!--begin::Table body-->
-												<tbody>
-													<?php
-													include './ajax/databaselog.php';
-
-													$sql = "SELECT no,regist_no,write_date,due_date,product_status,B.acc_name FROM dbo.regist_table A LEFT OUTER JOIN account B ON a.acc_name = B.acc_no";
-													$result = sqlsrv_query($con,$sql,$params,$options);
-													$total = sqlsrv_num_rows($result);
-
-													for ($i=0; $i < $total; $i++) {
-														$row = sqlsrv_fetch_array($result);
-														$no = $row['no'];
-														$regist_no = $row['regist_no'];
-														$acc_name = $row['acc_name'];
-														$write_date = $row['write_date'];
-														$due_date = $row['due_date'];
-
-														$product_status = $row['product_status'];
-													 ?>
-													<tr>
-														<!--begin::Checkbox-->
-														<td>
-															<div class="form-check form-check-sm form-check-custom form-check-solid">
-																<input class="form-check-input" type="checkbox" value="1" />
-															</div>
-														</td>
-														<!--end::Checkbox-->
-														<!--begin::Customer=-->
-														<td>
-															<a href="../../demo17/dist/apps/customers/view.html" class="text-gray-800 text-hover-primary mb-1"><?=$regist_no?></a>
-														</td>
-														<!--end::Customer=-->
-														<!--begin::Status=-->
-														<td>
-															<div class="badge badge-light-success">Active</div>
-														</td>
-														<!--end::Status=-->
-														<!--begin::Billing=-->
-														<td>
-															<div class="badge badge-light"><?=$acc_name?></div>
-														</td>
-														<!--end::Billing=-->
-														<!--begin::Product=-->
-														<td><?=$write_date?></td>
-														<!--end::Product=-->
-														<!--begin::Date=-->
-														<td><?=$due_date?></td>
-														<!--end::Date=-->
-														<!--begin::Action=-->
-														<td class="text-end">
-															<a href="#" class="btn btn-light btn-active-light-primary btn-sm" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">Actions
-															<!--begin::Svg Icon | path: icons/duotune/arrows/arr072.svg-->
-															<span class="svg-icon svg-icon-5 m-0">
-																<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-																	<path d="M11.4343 12.7344L7.25 8.55005C6.83579 8.13583 6.16421 8.13584 5.75 8.55005C5.33579 8.96426 5.33579 9.63583 5.75 10.05L11.2929 15.5929C11.6834 15.9835 12.3166 15.9835 12.7071 15.5929L18.25 10.05C18.6642 9.63584 18.6642 8.96426 18.25 8.55005C17.8358 8.13584 17.1642 8.13584 16.75 8.55005L12.5657 12.7344C12.2533 13.0468 11.7467 13.0468 11.4343 12.7344Z" fill="currentColor" />
-																</svg>
-															</span>
-															<!--end::Svg Icon--></a>
-															<!--begin::Menu-->
-															<div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-semibold fs-7 w-125px py-4" data-kt-menu="true">
-																<!--begin::Menu item-->
-																<div class="menu-item px-3">
-																	<a href="../../intra/apps/create/list.php?data=<?=$regist_no?>" class="menu-link px-3">View</a>
-																</div>
-																<!--end::Menu item-->
-																<!--begin::Menu item-->
-																<div class="menu-item px-3">
-																	<a href="../../intra/apps/create/modify.php?data=<?=$regist_no?>" class="menu-link px-3">Edit</a>
-																</div>
-																<!--end::Menu item-->
-																<!--begin::Menu item-->
-																<div class="menu-item px-3">
-																	<a href="#" data-kt-subscriptions-table-filter="delete_row" class="menu-link px-3">Delete</a>
-																</div>
-																<!--end::Menu item-->
-															</div>
-															<!--end::Menu-->
-														</td>
-														<!--end::Action=-->
-													</tr>
 														<?php } ?>
-												</tbody>
-												</table>
-										<!--end::Body-->
-									</div>
-								</div>
+														</select>
+													</div>
+													<!--end::Input group-->
+													<!--begin::Input group-->
+													<div class="mb-10">
+														<label class="form-label fs-6 fw-semibold">업체주소:</label>
+														<select class="form-select form-select-solid fw-bold" data-kt-select2="true" data-placeholder="Select option" data-allow-clear="true" data-kt-subscription-table-filter="product" data-hide-search="true">
+															<option></option>
+															<option value="서울">서울</option>
+															<option value="대구">대구</option>
 
-									<!--end::Row-->
+														</select>
+													</div>
+													<!--end::Input group-->
+													<!--begin::Actions-->
+													<div class="d-flex justify-content-end">
+														<button type="reset" class="btn btn-light btn-active-light-primary fw-semibold me-2 px-6" data-kt-menu-dismiss="true" data-kt-subscription-table-filter="reset">Reset</button>
+														<button type="submit" class="btn btn-primary fw-semibold px-6" data-kt-menu-dismiss="true" data-kt-subscription-table-filter="filter">Apply</button>
+													</div>
+													<!--end::Actions-->
+												</div>
+												<!--end::Content-->
+											</div>
+											<!--end::Menu 1-->
+											<!--end::Filter-->
+
+
+											<!--begin::Add subscription-->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#kt_modal_new_target">업체등록</button>
+											<!--end::Add subscription-->
+										</div>
+										<!--end::Toolbar-->
+										<!--begin::Group actions-->
+										<div class="d-flex justify-content-end align-items-center d-none" data-kt-subscription-table-toolbar="selected">
+											<div class="fw-bold me-5">
+											<span class="me-2" data-kt-subscription-table-select="selected_count"></span>Selected</div>
+											<button type="button" class="btn btn-danger" onclick="remove();">Delete Selected</button>
+										</div>
+										<!--end::Group actions-->
+									</div>
+									<!--end::Card toolbar-->
 								</div>
-								<!--end::Col-->
+								<!--end::Card header-->
+								<!--begin::Card body-->
+								<div class="card-body pt-0">
+									<!--begin::Table-->
+									<table class="table align-middle table-row-dashed fs-6 gy-5" id="kt_subscriptions_table">
+										<!--begin::Table head-->
+										<thead>
+											<!--begin::Table row-->
+											<tr class="text-start text-muted fw-bold fs-7 text-uppercase gs-0">
+												<th class="w-10px pe-2">
+													<div class="form-check form-check-sm form-check-custom form-check-solid me-3">
+														<input class="form-check-input" type="checkbox" data-kt-check="true" data-kt-check-target="#kt_subscriptions_table .form-check-input" value="1" />
+													</div>
+												</th>
+												<th class="min-w-125px">업체명</th>
+														<th class="min-w-125px">사업자번호</th>
+
+
+												<th class="min-w-125px">업태</th>
+																<th class="min-w-125px">업체주소</th>
+												<th class="min-w-125px">전화번호</th>
+												<th class="text-end min-w-70px">Actions</th>
+											</tr>
+											<!--end::Table row-->
+										</thead>
+										<!--end::Table head-->
+										<!--begin::Table body-->
+										<tbody class="text-gray-600 fw-semibold">
+
+
+
+											<?php
+											$sql = "  SELECT A.no,A.acc_name,A.acc_bu_no,B.status_name,A.acc_add1,A.acc_phone FROM dbo.account A LEFT OUTER JOIN dbo.account_status B ON A.acc_status = B.status_no";
+											$result = sqlsrv_query($con,$sql,$params,$options);
+
+											$total = sqlsrv_num_rows($result);
+
+											for ($i=0; $i < $total; $i++) {
+												$row = sqlsrv_fetch_array($result);
+												$no = $row['no'];
+												$acc_name = $row['acc_name'];
+												$acc_bu_no = $row['acc_bu_no'];
+												$status_name = $row['status_name'];
+												$acc_add1 = $row['acc_add1'];
+												$acc_phone = $row['acc_phone'];
+
+											 ?>
+
+											<tr>
+												<!--begin::Checkbox-->
+												<td>
+													<div class="form-check form-check-sm form-check-custom form-check-solid">
+														<input class="form-check-input" type="checkbox" value="<?=$no?>" name="chk"/>
+													</div>
+												</td>
+												<!--end::Checkbox-->
+												<!--begin::Customer=-->
+												<td>
+													<a href="./apps/account/view.php?data=<?=$no?>" class="text-gray-800 text-hover-primary mb-1"><?=$acc_name?></a>
+												</td>
+												<!--end::Customer=-->
+												<!--begin::Status=-->
+
+											<td><?=$acc_bu_no?></td>
+
+												<!--end::Status=-->
+												<!--begin::Billing=-->
+												<td>
+													<div class="badge badge-light"><?=$status_name?></div>
+												</td>
+												<!--end::Billing=-->
+												<!--begin::Product=-->
+												<td><?=$acc_add1?></td>
+												<!--end::Product=-->
+												<!--begin::Date=-->
+												<td><?=$acc_phone?></td>
+												<!--end::Date=-->
+												<!--begin::Action=-->
+												<td class="text-end">
+													<a href="#" class="btn btn-light btn-active-light-primary btn-sm" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">Actions
+													<!--begin::Svg Icon | path: icons/duotune/arrows/arr072.svg-->
+													<span class="svg-icon svg-icon-5 m-0">
+														<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<path d="M11.4343 12.7344L7.25 8.55005C6.83579 8.13583 6.16421 8.13584 5.75 8.55005C5.33579 8.96426 5.33579 9.63583 5.75 10.05L11.2929 15.5929C11.6834 15.9835 12.3166 15.9835 12.7071 15.5929L18.25 10.05C18.6642 9.63584 18.6642 8.96426 18.25 8.55005C17.8358 8.13584 17.1642 8.13584 16.75 8.55005L12.5657 12.7344C12.2533 13.0468 11.7467 13.0468 11.4343 12.7344Z" fill="currentColor" />
+														</svg>
+													</span>
+													<!--end::Svg Icon--></a>
+													<!--begin::Menu-->
+													<div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-semibold fs-7 w-125px py-4" data-kt-menu="true">
+														<!--begin::Menu item-->
+														<div class="menu-item px-3">
+															<a href="../../demo17/dist/apps/subscriptions/add.html" class="menu-link px-3">View</a>
+														</div>
+														<!--end::Menu item-->
+														<!--begin::Menu item-->
+														<div class="menu-item px-3">
+															<a href="../../demo17/dist/apps/subscriptions/add.html" class="menu-link px-3">Edit</a>
+														</div>
+														<!--end::Menu item-->
+														<!--begin::Menu item-->
+														<div class="menu-item px-3">
+															<a href="#" data-kt-subscriptions-table-filter="delete_row" class="menu-link px-3">Delete</a>
+														</div>
+														<!--end::Menu item-->
+													</div>
+													<!--end::Menu-->
+												</td>
+												<!--end::Action=-->
+											</tr>
+										<?php } ?>
+
+
+
+										</tbody>
+										<!--end::Table body-->
+									</table>
+									<!--end::Table-->
+								</div>
+								<!--end::Card body-->
 							</div>
-							<!--end::Row-->
+							<!--end::Card-->
+							<!--begin::Modals-->
+							<!--begin::Modal - Adjust Balance-->
+							<div class="modal fade" id="kt_subscriptions_export_modal" tabindex="-1" aria-hidden="true">
+								<!--begin::Modal dialog-->
+								<div class="modal-dialog modal-dialog-centered mw-650px">
+									<!--begin::Modal content-->
+									<div class="modal-content">
+										<!--begin::Modal header-->
+										<div class="modal-header">
+											<!--begin::Modal title-->
+											<h2 class="fw-bold">Export Subscriptions</h2>
+											<!--end::Modal title-->
+											<!--begin::Close-->
+											<div id="kt_subscriptions_export_close" class="btn btn-icon btn-sm btn-active-icon-primary">
+												<!--begin::Svg Icon | path: icons/duotune/arrows/arr061.svg-->
+												<span class="svg-icon svg-icon-1">
+													<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<rect opacity="0.5" x="6" y="17.3137" width="16" height="2" rx="1" transform="rotate(-45 6 17.3137)" fill="currentColor" />
+														<rect x="7.41422" y="6" width="16" height="2" rx="1" transform="rotate(45 7.41422 6)" fill="currentColor" />
+													</svg>
+												</span>
+												<!--end::Svg Icon-->
+											</div>
+											<!--end::Close-->
+										</div>
+										<!--end::Modal header-->
+										<!--begin::Modal body-->
+										<div class="modal-body scroll-y mx-5 mx-xl-15 my-7">
+											<!--begin::Form-->
+											<form id="kt_subscriptions_export_form" class="form" action="#">
+												<!--begin::Input group-->
+												<div class="fv-row mb-10">
+													<!--begin::Label-->
+													<label class="fs-5 fw-semibold form-label mb-5">Select Export Format:</label>
+													<!--end::Label-->
+													<!--begin::Input-->
+													<select data-control="select2" data-placeholder="Select a format" data-hide-search="true" name="format" class="form-select form-select-solid">
+														<option value="excell">Excel</option>
+														<option value="pdf">PDF</option>
+														<option value="cvs">CVS</option>
+														<option value="zip">ZIP</option>
+													</select>
+													<!--end::Input-->
+												</div>
+												<!--end::Input group-->
+												<!--begin::Input group-->
+												<div class="fv-row mb-10">
+													<!--begin::Label-->
+													<label class="fs-5 fw-semibold form-label mb-5">Select Date Range:</label>
+													<!--end::Label-->
+													<!--begin::Input-->
+													<input class="form-control form-control-solid" placeholder="Pick a date" name="date" />
+													<!--end::Input-->
+												</div>
+												<!--end::Input group-->
+												<!--begin::Row-->
+												<div class="row fv-row mb-15">
+													<!--begin::Label-->
+													<label class="fs-5 fw-semibold form-label mb-5">Payment Type:</label>
+													<!--end::Label-->
+													<!--begin::Radio group-->
+													<div class="d-flex flex-column">
+														<!--begin::Radio button-->
+														<label class="form-check form-check-custom form-check-sm form-check-solid mb-3">
+															<input class="form-check-input" type="checkbox" value="1" checked="checked" name="payment_type" />
+															<span class="form-check-label text-gray-600 fw-semibold">All</span>
+														</label>
+														<!--end::Radio button-->
+														<!--begin::Radio button-->
+														<label class="form-check form-check-custom form-check-sm form-check-solid mb-3">
+															<input class="form-check-input" type="checkbox" value="2" checked="checked" name="payment_type" />
+															<span class="form-check-label text-gray-600 fw-semibold">Visa</span>
+														</label>
+														<!--end::Radio button-->
+														<!--begin::Radio button-->
+														<label class="form-check form-check-custom form-check-sm form-check-solid mb-3">
+															<input class="form-check-input" type="checkbox" value="3" name="payment_type" />
+															<span class="form-check-label text-gray-600 fw-semibold">Mastercard</span>
+														</label>
+														<!--end::Radio button-->
+														<!--begin::Radio button-->
+														<label class="form-check form-check-custom form-check-sm form-check-solid">
+															<input class="form-check-input" type="checkbox" value="4" name="payment_type" />
+															<span class="form-check-label text-gray-600 fw-semibold">American Express</span>
+														</label>
+														<!--end::Radio button-->
+													</div>
+													<!--end::Input group-->
+												</div>
+												<!--end::Row-->
+												<!--begin::Actions-->
+												<div class="text-center">
+													<button type="reset" id="kt_subscriptions_export_cancel" class="btn btn-light me-3">Discard</button>
+													<button type="submit" id="kt_subscriptions_export_submit" class="btn btn-primary">
+														<span class="indicator-label">Submit</span>
+														<span class="indicator-progress">Please wait...
+														<span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
+													</button>
+												</div>
+												<!--end::Actions-->
+											</form>
+											<!--end::Form-->
+										</div>
+										<!--end::Modal body-->
+									</div>
+									<!--end::Modal content-->
+								</div>
+								<!--end::Modal dialog-->
+							</div>
+							<!--end::Modal - New Card-->
+							<!--end::Modals-->
 						</div>
 						<!--end::Container-->
 					</div>
@@ -7237,9 +7244,6 @@ License: For each use you must have a valid license purchased only from above li
 		<!--end::Scrolltop-->
 		<!--begin::Modals-->
 		<!--begin::Modal - Upgrade plan-->
-
-		<!-- 등록모달 -->
-
 		<div class="modal fade" id="kt_modal_upgrade_plan" tabindex="-1" aria-hidden="true">
 			<!--begin::Modal dialog-->
 			<div class="modal-dialog modal-xl">
@@ -7846,187 +7850,6 @@ License: For each use you must have a valid license purchased only from above li
 			<!--end::Modal dialog-->
 		</div>
 		<!--end::Modal - Upgrade plan-->
-		<!--begin::Modal - Create App-->
-		<div class="modal fade" id="kt_modal_create_app" tabindex="-1" aria-hidden="true">
-			<!--begin::Modal dialog-->
-			<div class="modal-dialog modal-dialog-centered mw-900px">
-				<!--begin::Modal content-->
-				<div class="modal-content">
-					<!--begin::Modal header-->
-					<div class="modal-header">
-						<!--begin::Modal title-->
-						<h2>등록</h2>
-						<!--end::Modal title-->
-						<!--begin::Close-->
-						<div class="btn btn-sm btn-icon btn-active-color-primary" data-bs-dismiss="modal">
-							<!--begin::Svg Icon | path: icons/duotune/arrows/arr061.svg-->
-							<span class="svg-icon svg-icon-1">
-								<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<rect opacity="0.5" x="6" y="17.3137" width="16" height="2" rx="1" transform="rotate(-45 6 17.3137)" fill="currentColor" />
-									<rect x="7.41422" y="6" width="16" height="2" rx="1" transform="rotate(45 7.41422 6)" fill="currentColor" />
-								</svg>
-							</span>
-							<!--end::Svg Icon-->
-						</div>
-						<!--end::Close-->
-					</div>
-					<!--end::Modal header-->
-					<!--begin::Modal body-->
-					<div class="modal-body py-lg-10 px-lg-10">
-						<!--begin::Stepper-->
-						<div class="stepper stepper-pills stepper-column d-flex flex-column flex-xl-row flex-row-fluid" id="kt_modal_create_app_stepper">
-
-							<!--begin::Content-->
-							<div class="flex-row-fluid py-lg-5 px-lg-15">
-								<!--begin::Form-->
-								<form class="form" novalidate="novalidate" id="kt_modal_create_app_form">
-									<!--begin::Step 1-->
-									<div class="current" data-kt-stepper-element="content">
-										<div class="w-100">
-
-											<!--begin::Input group-->
-											<div class="fv-row">
-												<!--begin::Label-->
-												<label class="d-flex align-items-center fs-5 fw-semibold mb-4">
-													<span class="required">Category</span>
-													<i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip" title="Select your app category"></i>
-												</label>
-												<!--end::Label-->
-												<!--begin:Options-->
-												<div class="fv-row">
-													<!--begin:Option-->
-													<label class="d-flex flex-stack mb-5 cursor-pointer">
-														<!--begin:Label-->
-														<span class="d-flex align-items-center me-2">
-															<!--begin:Icon-->
-															<span class="symbol symbol-50px me-6">
-																<span class="symbol-label bg-light-primary">
-																	<!--begin::Svg Icon | path: icons/duotune/maps/map004.svg-->
-																	<span class="svg-icon svg-icon-1 svg-icon-primary">
-																		<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-																			<path opacity="0.3" d="M18.4 5.59998C21.9 9.09998 21.9 14.8 18.4 18.3C14.9 21.8 9.2 21.8 5.7 18.3L18.4 5.59998Z" fill="currentColor" />
-																			<path d="M12 2C6.5 2 2 6.5 2 12C2 17.5 6.5 22 12 22C17.5 22 22 17.5 22 12C22 6.5 17.5 2 12 2ZM19.9 11H13V8.8999C14.9 8.6999 16.7 8.00005 18.1 6.80005C19.1 8.00005 19.7 9.4 19.9 11ZM11 19.8999C9.7 19.6999 8.39999 19.2 7.39999 18.5C8.49999 17.7 9.7 17.2001 11 17.1001V19.8999ZM5.89999 6.90002C7.39999 8.10002 9.2 8.8 11 9V11.1001H4.10001C4.30001 9.4001 4.89999 8.00002 5.89999 6.90002ZM7.39999 5.5C8.49999 4.7 9.7 4.19998 11 4.09998V7C9.7 6.8 8.39999 6.3 7.39999 5.5ZM13 17.1001C14.3 17.3001 15.6 17.8 16.6 18.5C15.5 19.3 14.3 19.7999 13 19.8999V17.1001ZM13 4.09998C14.3 4.29998 15.6 4.8 16.6 5.5C15.5 6.3 14.3 6.80002 13 6.90002V4.09998ZM4.10001 13H11V15.1001C9.1 15.3001 7.29999 16 5.89999 17.2C4.89999 16 4.30001 14.6 4.10001 13ZM18.1 17.1001C16.6 15.9001 14.8 15.2 13 15V12.8999H19.9C19.7 14.5999 19.1 16.0001 18.1 17.1001Z" fill="currentColor" />
-																		</svg>
-																	</span>
-																	<!--end::Svg Icon-->
-																</span>
-															</span>
-															<!--end:Icon-->
-															<!--begin:Info-->
-															<span class="d-flex flex-column">
-																<span class="fw-bold fs-6">생산의뢰서 - 하드웨어</span>
-																<!-- <span class="fs-7 text-muted">Creating a clear text structure is just one SEO</span> -->
-															</span>
-															<!--end:Info-->
-														</span>
-														<!--end:Label-->
-														<!--begin:Input-->
-														<span class="form-check form-check-custom form-check-solid">
-															<input class="form-check-input" type="radio" name="category" value="1" checked />
-														</span>
-														<!--end:Input-->
-													</label>
-													<!--end::Option-->
-													<!--begin:Option-->
-													<label class="d-flex flex-stack mb-5 cursor-pointer">
-														<!--begin:Label-->
-														<span class="d-flex align-items-center me-2">
-															<!--begin:Icon-->
-															<span class="symbol symbol-50px me-6">
-																<span class="symbol-label bg-light-danger">
-																	<!--begin::Svg Icon | path: icons/duotune/general/gen025.svg-->
-																	<span class="svg-icon svg-icon-1 svg-icon-danger">
-																		<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-																			<rect x="2" y="2" width="9" height="9" rx="2" fill="currentColor" />
-																			<rect opacity="0.3" x="13" y="2" width="9" height="9" rx="2" fill="currentColor" />
-																			<rect opacity="0.3" x="13" y="13" width="9" height="9" rx="2" fill="currentColor" />
-																			<rect opacity="0.3" x="2" y="13" width="9" height="9" rx="2" fill="currentColor" />
-																		</svg>
-																	</span>
-																	<!--end::Svg Icon-->
-																</span>
-															</span>
-															<!--end:Icon-->
-															<!--begin:Info-->
-															<span class="d-flex flex-column">
-																<span class="fw-bold fs-6">생산의뢰서 - 방충망</span>
-																<!-- <span class="fs-7 text-muted">Creating a clear text structure is just one aspect</span> -->
-															</span>
-															<!--end:Info-->
-														</span>
-														<!--end:Label-->
-														<!--begin:Input-->
-														<span class="form-check form-check-custom form-check-solid">
-															<input class="form-check-input" type="radio" name="category" value="2" />
-														</span>
-														<!--end:Input-->
-													</label>
-													<!--end::Option-->
-
-												</div>
-												<!--end:Options-->
-											</div>
-											<!--end::Input group-->
-										</div>
-									</div>
-									<!--end::Step 1-->
-									<!--begin::Actions-->
-									<div class="d-flex flex-stack pt-10">
-										<!--begin::Wrapper-->
-										<div class="me-2">
-											<button type="button" class="btn btn-lg btn-light-primary me-3" data-kt-stepper-action="previous">
-											<!--begin::Svg Icon | path: icons/duotune/arrows/arr063.svg-->
-											<span class="svg-icon svg-icon-3 me-1">
-												<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-													<rect opacity="0.5" x="6" y="11" width="13" height="2" rx="1" fill="currentColor" />
-													<path d="M8.56569 11.4343L12.75 7.25C13.1642 6.83579 13.1642 6.16421 12.75 5.75C12.3358 5.33579 11.6642 5.33579 11.25 5.75L5.70711 11.2929C5.31658 11.6834 5.31658 12.3166 5.70711 12.7071L11.25 18.25C11.6642 18.6642 12.3358 18.6642 12.75 18.25C13.1642 17.8358 13.1642 17.1642 12.75 16.75L8.56569 12.5657C8.25327 12.2533 8.25327 11.7467 8.56569 11.4343Z" fill="currentColor" />
-												</svg>
-											</span>
-											<!--end::Svg Icon-->Back</button>
-										</div>
-										<!--end::Wrapper-->
-										<!--begin::Wrapper-->
-										<div>
-											<button type="button" class="btn btn-lg btn-primary" data-kt-stepper-action="submit">
-												<span class="indicator-label">Submit
-												<!--begin::Svg Icon | path: icons/duotune/arrows/arr064.svg-->
-												<span class="svg-icon svg-icon-3 ms-2 me-0">
-													<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-														<rect opacity="0.5" x="18" y="13" width="13" height="2" rx="1" transform="rotate(-180 18 13)" fill="currentColor" />
-														<path d="M15.4343 12.5657L11.25 16.75C10.8358 17.1642 10.8358 17.8358 11.25 18.25C11.6642 18.6642 12.3358 18.6642 12.75 18.25L18.2929 12.7071C18.6834 12.3166 18.6834 11.6834 18.2929 11.2929L12.75 5.75C12.3358 5.33579 11.6642 5.33579 11.25 5.75C10.8358 6.16421 10.8358 6.83579 11.25 7.25L15.4343 11.4343C15.7467 11.7467 15.7467 12.2533 15.4343 12.5657Z" fill="currentColor" />
-													</svg>
-												</span>
-												<!--end::Svg Icon--></span>
-												<span class="indicator-progress">Please wait...
-												<span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
-											</button>
-											<button type="button" class="btn btn-lg btn-primary" onclick="create();">Continue
-											<!--begin::Svg Icon | path: icons/duotune/arrows/arr064.svg-->
-											<span class="svg-icon svg-icon-3 ms-1 me-0">
-												<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-													<rect opacity="0.5" x="18" y="13" width="13" height="2" rx="1" transform="rotate(-180 18 13)" fill="currentColor" />
-													<path d="M15.4343 12.5657L11.25 16.75C10.8358 17.1642 10.8358 17.8358 11.25 18.25C11.6642 18.6642 12.3358 18.6642 12.75 18.25L18.2929 12.7071C18.6834 12.3166 18.6834 11.6834 18.2929 11.2929L12.75 5.75C12.3358 5.33579 11.6642 5.33579 11.25 5.75C10.8358 6.16421 10.8358 6.83579 11.25 7.25L15.4343 11.4343C15.7467 11.7467 15.7467 12.2533 15.4343 12.5657Z" fill="currentColor" />
-												</svg>
-											</span>
-											<!--end::Svg Icon--></button>
-										</div>
-										<!--end::Wrapper-->
-									</div>
-									<!--end::Actions-->
-								</form>
-								<!--end::Form-->
-							</div>
-							<!--end::Content-->
-						</div>
-						<!--end::Stepper-->
-					</div>
-					<!--end::Modal body-->
-				</div>
-				<!--end::Modal content-->
-			</div>
-			<!--end::Modal dialog-->
-		</div>
-		<!--end::Modal - Create App-->
 		<!--begin::Modal - Users Search-->
 		<div class="modal fade" id="kt_modal_users_search" tabindex="-1" aria-hidden="true">
 			<!--begin::Modal dialog-->
@@ -8095,6 +7918,9 @@ License: For each use you must have a valid license purchased only from above li
 								</span>
 								<!--end::Reset-->
 							</form>
+
+
+
 							<!--end::Form-->
 							<!--begin::Wrapper-->
 							<div class="py-5">
@@ -8775,13 +8601,13 @@ License: For each use you must have a valid license purchased only from above li
 												<!--end::Checkbox-->
 												<!--begin::Avatar-->
 												<div class="symbol symbol-35px symbol-circle">
-													<span class="symbol-label bg-light-danger text-danger fw-semibold">O</span>
+													<img alt="Pic" src="assets/media/avatars/300-9.jpg" />
 												</div>
 												<!--end::Avatar-->
 												<!--begin::Details-->
 												<div class="ms-5">
-													<a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Olivia Wild</a>
-													<div class="fw-semibold text-muted">olivia@corpmail.com</div>
+													<a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Francis Mitcham</a>
+													<div class="fw-semibold text-muted">f.mit@kpmg.com</div>
 												</div>
 												<!--end::Details-->
 											</div>
@@ -9400,56 +9226,253 @@ License: For each use you must have a valid license purchased only from above li
 		<script src="assets/js/scripts.bundle.js"></script>
 		<!--end::Global Javascript Bundle-->
 		<!--begin::Vendors Javascript(used by this page)-->
-		<script src="assets/plugins/custom/fullcalendar/fullcalendar.bundle.js"></script>
-		<script src="https://cdn.amcharts.com/lib/5/index.js"></script>
-		<script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
-		<script src="https://cdn.amcharts.com/lib/5/percent.js"></script>
-		<script src="https://cdn.amcharts.com/lib/5/radar.js"></script>
-		<script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
-		<script src="https://cdn.amcharts.com/lib/5/map.js"></script>
-		<script src="https://cdn.amcharts.com/lib/5/geodata/worldLow.js"></script>
-		<script src="https://cdn.amcharts.com/lib/5/geodata/continentsLow.js"></script>
-		<script src="https://cdn.amcharts.com/lib/5/geodata/usaLow.js"></script>
-		<script src="https://cdn.amcharts.com/lib/5/geodata/worldTimeZonesLow.js"></script>
-		<script src="https://cdn.amcharts.com/lib/5/geodata/worldTimeZoneAreasLow.js"></script>
 		<script src="assets/plugins/custom/datatables/datatables.bundle.js"></script>
 		<!--end::Vendors Javascript-->
 		<!--begin::Custom Javascript(used by this page)-->
-		<script src="assets/js/widgets.bundle.js"></script>
-		<script src="assets/js/custom/widgets.js"></script>
-		<script src="assets/js/custom/apps/chat/chat.js"></script>
-		<script src="assets/js/custom/utilities/modals/upgrade-plan.js"></script>
-		<script src="assets/js/custom/utilities/modals/create-app.js"></script>
-		<script src="assets/js/custom/utilities/modals/users-search.js"></script>
-		<!--end::Custom Javascript-->
-		<!--begin::Vendors Javascript(used by this page)-->
-		<script src="assets/plugins/custom/datatables/datatables.bundle.js"></script>
-		<!--end::Vendors Javascript-->
-		<!--begin::Custom Javascript(used by this page)-->
-		<!-- <script src="assets/js/custom/apps/ecommerce/sales/listing.js"></script> -->
+		<!-- <script src="assets/js/custom/apps/subscriptions/list/export.js"></script> -->
 		<script src="assets/js/custom/apps/subscriptions/list/list.js"></script>
+
+
+				<!-- <script src="assets/js/custom/apps/file-manager/list.js"></script> -->
 		<script src="assets/js/widgets.bundle.js"></script>
 		<script src="assets/js/custom/widgets.js"></script>
 		<script src="assets/js/custom/apps/chat/chat.js"></script>
 		<script src="assets/js/custom/utilities/modals/upgrade-plan.js"></script>
 		<script src="assets/js/custom/utilities/modals/users-search.js"></script>
+				<script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+
+				<script>
+				function open_address(){
+
+							new daum.Postcode({
+										oncomplete: function(data) {
+										 // 팝업에서 검색결과 항목을 클릭했을때 실행할 코드를 작성하는 부분.
+
+										 // 도로명 주소의 노출 규칙에 따라 주소를 조합한다.
+										 // 내려오는 변수가 값이 없는 경우엔 공백('')값을 가지므로, 이를 참고하여 분기 한다.
+										 var fullRoadAddr = data.roadAddress; // 도로명 주소 변수
+										 var extraRoadAddr = ''; // 도로명 조합형 주소 변수
+
+										 // 법정동명이 있을 경우 추가한다. (법정리는 제외)
+										 // 법정동의 경우 마지막 문자가 "동/로/가"로 끝난다.
+										 if(data.bname !== '' && /[동|로|가]$/g.test(data.bname)){
+												 extraRoadAddr += data.bname;
+										 }
+										 // 건물명이 있고, 공동주택일 경우 추가한다.
+										 if(data.buildingName !== '' && data.apartment === 'Y'){
+												extraRoadAddr += (extraRoadAddr !== '' ? ', ' + data.buildingName : data.buildingName);
+										 }
+										 // 도로명, 지번 조합형 주소가 있을 경우, 괄호까지 추가한 최종 문자열을 만든다.
+										 if(extraRoadAddr !== ''){
+												 extraRoadAddr = ' (' + extraRoadAddr + ')';
+										 }
+										 // 도로명, 지번 주소의 유무에 따라 해당 조합형 주소를 추가한다.
+										 if(fullRoadAddr !== ''){
+												 fullRoadAddr += extraRoadAddr;
+										 }
+
+										 // 주소 정보를 해당 필드에 넣는다.
+										 document.getElementById('address1').value = fullRoadAddr;//도로명주소
 
 
-		<script>
-		$("#example2").DataTable({
-			info: false,
-lengthChange: false,
-				pageLength: 2,     //페이지 당 글 개수 설정
-ordering: false,
-				paging: true,        //
 
-			});
+										}
+								}).open();
 
-			function create(){
-				location.href = "./apps/create/add.php"
+				}
+				</script>
+				<script>
+  (function() {
+
+    'use strict';
+
+    $('.input-file').each(function() {
+      var $input = $(this),
+          $label = $input.next('.js-labelFile'),
+          labelVal = $label.html();
+
+     $input.on('change', function(element) {
+        var fileName = '';
+        if (element.target.value) fileName = element.target.value.split('\\').pop();
+        fileName ? $label.addClass('has-file').find('.js-fileName').html(fileName) : $label.removeClass('has-file').html(labelVal);
+     });
+    });
+
+  })();
+	function cancel(){
+		$('#kt_modal_new_target').modal('hide');
+	}
+	function insert(){
+		var formData = new FormData();
+
+	var acc_name = $("#acc_name").val();
+	var acc_bu_no = $("#acc_bu_no").val();
+	var acc_status = $("#acc_status").val();
+	var acc_add1 = $("#address1").val();
+	var acc_add2 = $("#address2").val();
+	var acc_phone = $("#acc_phone").val();
+	var acc_fax = $("#acc_fax").val();
+
+
+	var imageInput = $("#file")[0];
+  // 파일을 여러개 선택할 수 있으므로 files 라는 객체에 담긴다.
+  console.log("imageInput: ", imageInput.files)
+
+  // if(imageInput.files.length === 0){
+  //   alert("파일은 선택해주세요");
+  //   return;
+  // }
+
+  var formData = new FormData();
+  formData.append("image", imageInput.files[0]);
+
+
+	console.log(imageInput)
+	console.log(formData)
+
+	if(acc_name == ''){
+		Swal.fire({
+			title: '업체명을 입력하세요!',
+			showClass: {
+				popup: 'animate__animated animate__fadeInDown'
+			},
+			hideClass: {
+				popup: 'animate__animated animate__fadeOutUp'
 			}
-		</script>
+		})
+		return;
+	}
+	if(acc_bu_no == ''){
+		Swal.fire({
+			title: '사업자번호를 입력하세요!',
+			showClass: {
+				popup: 'animate__animated animate__fadeInDown'
+			},
+			hideClass: {
+				popup: 'animate__animated animate__fadeOutUp'
+			}
+		})
+		return;
+	}
 
+var file_name = '';
+	$.ajax({
+		type: 'post',
+		url: './ajax/insert_data.php',
+		async:false, // 전역변수 설정 변수
+		enctype: 'multipart/form-data', // 필수
+		processData: false, // 필수
+		contentType: false, // 필수
+		data: formData, // 필수
+
+		success: function (data) {
+			file_name = data;
+
+
+		},
+		error: function (request, status, error) {
+			console.log('code: '+request.status+"\n"+'message: '+request.responseText+"\n"+'error: '+error);
+		}
+	});
+
+
+	$.ajax({
+		type: 'post',
+		url: './ajax/insert_acc.php',
+		async:false, // 전역변수 설정 변수
+		data:{
+
+			acc_name:acc_name,   //컬럼
+				acc_bu_no:acc_bu_no,   //컬럼
+					acc_status:acc_status,   //컬럼
+						acc_add1:acc_add1,   //컬럼
+							acc_add2:acc_add2,   //컬럼
+								acc_phone:acc_phone,   //컬럼
+								acc_fax:acc_fax,   //컬럼
+								file_name:file_name,
+
+
+		},
+		success: function (data) {
+			console.log(data)
+				$("#insert_btn2").hide();
+			$("#insert_btn").show();
+
+			Swal.fire({
+				title: '등록되었습니다!',
+				icon: 'success',
+				showClass: {
+					popup: 'animate__animated animate__fadeInDown'
+				},
+				hideClass: {
+					popup: 'animate__animated animate__fadeOutUp'
+				}
+			})
+			  $('.swal2-confirm').click(function() {
+					location.reload();
+				});
+
+			// location.reload();
+
+		},
+		error: function (request, status, error) {
+			console.log('code: '+request.status+"\n"+'message: '+request.responseText+"\n"+'error: '+error);
+		}
+	});
+
+
+	}
+
+	function remove(){
+		var check_box_array = new Array();
+	  // 체크박스 체크값들을 check_box_array에 배열로 담는다.
+	  $("input[name=chk]:checked").each(function(){
+	    var check = $(this).val();
+	    check_box_array.push(check);
+	  })
+
+
+		Swal.fire({
+  title: '정말 삭제하시겠습니까?',
+  showDenyButton: false,
+  showCancelButton: true,
+  confirmButtonText: '삭제',
+}).then((result) => {
+  /* Read more about isConfirmed, isDenied below */
+  if (result.isConfirmed) {
+    Swal.fire('삭제되었습니다', '', 'success')
+  } else if (result.isDenied) {
+    Swal.fire('Changes are not saved', '', 'info')
+  }
+})
+
+
+$('.swal2-confirm').click(function() {
+	$.ajax({
+	type: 'post',
+	url: './ajax/remove.php',
+	async:false, // 전역변수 설정 변수
+	data:{
+		TABLENAME:'account',   //테이블이름
+		WHERENAME:'no',    //where 조건
+		VALUENAME: check_box_array    //where 조건값
+	},
+	success: function (data) {
+		// alert("삭제하였습니다.");
+		window.location.reload();
+	},
+	error: function (request, status, error) {
+	}
+});
+});
+
+
+	}
+</script>
+
+
+		<!--end::Custom Javascript-->
+		<!--end::Javascript-->
 	</body>
 	<!--end::Body-->
 </html>

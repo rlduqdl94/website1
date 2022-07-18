@@ -6344,7 +6344,7 @@ License: For each use you must have a valid license purchased only from above li
                         <!--begin::Heading-->
                         <div class="mb-13 text-center">
                           <!--begin::Title-->
-                          <h1 class="mb-3">거래처 정보 등록</h1>
+                          <h1 class="mb-3">거래처 정보 수정</h1>
                           <!--end::Title-->
                           <!--begin::Description-->
                           <div class="text-muted fw-semibold fs-5">거래처 정보를 입력한 후

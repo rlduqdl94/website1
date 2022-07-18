@@ -34,47 +34,47 @@ License: For each use you must have a valid license purchased only from above li
 		<!--begin::Global Stylesheets Bundle(used by all pages)-->
 		<link href="assets/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
 		<link href="assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
+		<style media="screen">
+
+		.btn-tertiary {
+	color: #555;
+	padding: 0;
+	line-height: 40px;
+	width: 300px;
+	margin: auto;
+	display: block;
+	border: 2px solid #555;
+	}
+	.btn-tertiary:hover, .btn-tertiary:focus {
+	color: #888888;
+	border-color: #888888;
+	}
+
+	/* input file style */
+	.input-file {
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+	}
+	.input-file + .js-labelFile {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	padding: 0 10px;
+	cursor: pointer;
+	}
+	.input-file + .js-labelFile .icon:before {
+	content: "";
+	}
+	.input-file + .js-labelFile.has-file .icon:before {
+	content: "";
+	color: #5AAC7B;
+	}
+		</style>
 		<!--end::Global Stylesheets Bundle-->
-	<style media="screen">
-
-	.btn-tertiary {
-color: #555;
-padding: 0;
-line-height: 40px;
-width: 300px;
-margin: auto;
-display: block;
-border: 2px solid #555;
-}
-.btn-tertiary:hover, .btn-tertiary:focus {
-color: #888888;
-border-color: #888888;
-}
-
-/* input file style */
-.input-file {
-width: 0.1px;
-height: 0.1px;
-opacity: 0;
-overflow: hidden;
-position: absolute;
-z-index: -1;
-}
-.input-file + .js-labelFile {
-overflow: hidden;
-text-overflow: ellipsis;
-white-space: nowrap;
-padding: 0 10px;
-cursor: pointer;
-}
-.input-file + .js-labelFile .icon:before {
-content: "";
-}
-.input-file + .js-labelFile.has-file .icon:before {
-content: "";
-color: #5AAC7B;
-}
-	</style>
 	</head>
 	<!--end::Head-->
 	<!--begin::Body-->
@@ -3296,258 +3296,6 @@ color: #5AAC7B;
 					<!--end::Footer-->
 				</div>
 				<!--end::Aside-->
-
-				<div class="modal fade" id="kt_modal_upload" tabindex="-1" aria-hidden="true">
-					<!--begin::Modal dialog-->
-					<div class="modal-dialog modal-dialog-centered mw-650px">
-						<!--begin::Modal content-->
-						<div class="modal-content">
-							<!--begin::Form-->
-							<form class="form" action="none" id="kt_modal_upload_form">
-								<!--begin::Modal header-->
-								<div class="modal-header">
-									<!--begin::Modal title-->
-									<h2 class="fw-bold">Upload files</h2>
-									<!--end::Modal title-->
-									<!--begin::Close-->
-									<div class="btn btn-icon btn-sm btn-active-icon-primary" data-bs-dismiss="modal">
-										<!--begin::Svg Icon | path: icons/duotune/arrows/arr061.svg-->
-										<span class="svg-icon svg-icon-1">
-											<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-												<rect opacity="0.5" x="6" y="17.3137" width="16" height="2" rx="1" transform="rotate(-45 6 17.3137)" fill="currentColor" />
-												<rect x="7.41422" y="6" width="16" height="2" rx="1" transform="rotate(45 7.41422 6)" fill="currentColor" />
-											</svg>
-										</span>
-										<!--end::Svg Icon-->
-									</div>
-									<!--end::Close-->
-								</div>
-								<!--end::Modal header-->
-								<!--begin::Modal body-->
-								<div class="modal-body pt-10 pb-15 px-lg-17">
-									<!--begin::Input group-->
-									<div class="form-group">
-										<!--begin::Dropzone-->
-										<div class="dropzone dropzone-queue mb-2" id="kt_modal_upload_dropzone">
-											<!--begin::Controls-->
-											<div class="dropzone-panel mb-4">
-												<a class="dropzone-select btn btn-sm btn-primary me-2">Attach files</a>
-												<a class="dropzone-upload btn btn-sm btn-light-primary me-2">Upload All</a>
-												<a class="dropzone-remove-all btn btn-sm btn-light-primary">Remove All</a>
-											</div>
-											<!--end::Controls-->
-											<!--begin::Items-->
-											<div class="dropzone-items wm-200px">
-												<div class="dropzone-item p-5" style="display:none">
-													<!--begin::File-->
-													<div class="dropzone-file">
-														<div class="dropzone-filename text-dark" title="some_image_file_name.jpg">
-															<span data-dz-name="">some_image_file_name.jpg</span>
-															<strong>(
-															<span data-dz-size="">340kb</span>)</strong>
-														</div>
-														<div class="dropzone-error mt-0" data-dz-errormessage=""></div>
-													</div>
-													<!--end::File-->
-													<!--begin::Progress-->
-													<div class="dropzone-progress">
-														<div class="progress bg-light-primary">
-															<div class="progress-bar bg-primary" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" data-dz-uploadprogress=""></div>
-														</div>
-													</div>
-													<!--end::Progress-->
-													<!--begin::Toolbar-->
-													<div class="dropzone-toolbar">
-														<span class="dropzone-start">
-															<i class="bi bi-play-fill fs-3"></i>
-														</span>
-														<span class="dropzone-cancel" data-dz-remove="" style="display: none;">
-															<i class="bi bi-x fs-3"></i>
-														</span>
-														<span class="dropzone-delete" data-dz-remove="">
-															<i class="bi bi-x fs-1"></i>
-														</span>
-													</div>
-													<!--end::Toolbar-->
-												</div>
-											</div>
-											<!--end::Items-->
-										</div>
-										<!--end::Dropzone-->
-										<!--begin::Hint-->
-										<span class="form-text fs-6 text-muted">Max file size is 1MB per file.</span>
-										<!--end::Hint-->
-									</div>
-									<!--end::Input group-->
-								</div>
-								<!--end::Modal body-->
-							</form>
-							<!--end::Form-->
-						</div>
-					</div>
-				</div>
-				<div class="modal fade" id="kt_modal_new_target" tabindex="-1" aria-hidden="true">
-					<!--begin::Modal dialog-->
-					<div class="modal-dialog modal-dialog-centered mw-650px">
-						<!--begin::Modal content-->
-						<div class="modal-content rounded">
-							<!--begin::Modal header-->
-							<div class="modal-header pb-0 border-0 justify-content-end">
-								<!--begin::Close-->
-								<div class="btn btn-sm btn-icon btn-active-color-primary" data-bs-dismiss="modal">
-									<!--begin::Svg Icon | path: icons/duotune/arrows/arr061.svg-->
-									<span class="svg-icon svg-icon-1">
-										<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<rect opacity="0.5" x="6" y="17.3137" width="16" height="2" rx="1" transform="rotate(-45 6 17.3137)" fill="currentColor" />
-											<rect x="7.41422" y="6" width="16" height="2" rx="1" transform="rotate(45 7.41422 6)" fill="currentColor" />
-										</svg>
-									</span>
-									<!--end::Svg Icon-->
-								</div>
-								<!--end::Close-->
-							</div>
-							<!--begin::Modal header-->
-							<!--begin::Modal body-->
-							<div class="modal-body scroll-y px-10 px-lg-15 pt-0 pb-15">
-								<!--begin:Form-->
-								<form id="kt_modal_new_target_form" class="form" action="#">
-									<!--begin::Heading-->
-									<div class="mb-13 text-center">
-										<!--begin::Title-->
-										<h1 class="mb-3">거래처 정보 수정</h1>
-										<!--end::Title-->
-										<!--begin::Description-->
-										<div class="text-muted fw-semibold fs-5">거래처 정보를 입력한 후
-										<a href="#" class="fw-bold link-primary">확인해 주세요</a>.</div>
-										<!--end::Description-->
-									</div>
-									<!--end::Heading-->
-									<!--begin::Input group-->
-
-
-									<div class="d-flex flex-column mb-5 fv-row">
-										<!--begin::Label-->
-										<label class="required fs-5 fw-semibold mb-2">업체명</label>
-										<!--end::Label-->
-										<!--begin::Input-->
-										<input class="form-control form-control-solid" placeholder="" name="address1" id="acc_name" />
-										<!--end::Input-->
-									</div>
-
-
-
-									<div class="row mb-5">
-										<div class="col-md-6 fv-row">
-											<!--begin::Label-->
-											<label class="required fs-5 fw-semibold mb-2">사업자번호</label>
-											<!--end::Label-->
-											<!--begin::Input-->
-											<input type="text" class="form-control form-control-solid" placeholder="" name="" id="acc_bu_no"/>
-											<!--end::Input-->
-										</div>
-										<!--end::Col-->
-										<?php
-										include '../../ajax/databaselog.php';
-
-										$sql = "SELECT * FROM dbo.account_status";
-										$result = sqlsrv_query($con,$sql,$params,$options);
-
-										$total = sqlsrv_num_rows($result);
-
-
-
-										 ?>
-
-										<!--begin::Col-->
-										<div class="col-md-6 fv-row">
-											<!--end::Label-->
-											<label class="required fs-5 fw-semibold mb-2">업태</label>
-											<!--end::Label-->
-											<!--end::Input-->
-											<select name="timezone" data-hide-search="true" aria-label="Select a Timezone" data-control="select2" data-placeholder="date_period" class="form-select form-select-solid" id="acc_status">
-												<?php
-												for ($i=0; $i < $total; $i++) {
-													$row = sqlsrv_fetch_array($result);
-													$status_no = $row['status_no'];
-													$status_name = $row['status_name'];
-												 ?>
-												<option value="<?=$status_no?>"><?=$status_name?></option>
-
-											<?php } ?>
-											</select>
-											<!--end::Input-->
-										</div>
-									</div>
-
-									<div class="fv-row mb-7">
-										<!--begin::Label-->
-										<label class="fw-semibold fs-6 mb-2">주소</label>
-										<button type="button" class="btn btn-outline btn-outline-dashed btn-outline-primary btn-active-light-primary" onclick="open_address();">찾기
-										</button>
-										<!--end::Label-->
-										<!--begin::Input-->
-										<input type="text" name="user_name" id="address1"  class="form-control form-control-solid mb-3 mb-lg-0" placeholder="" value="" />
-										<!--end::Input-->
-									</div>
-
-									<div class="d-flex flex-column mb-5 fv-row">
-										<!--begin::Label-->
-										<label class=" fs-5 fw-semibold mb-2">상세 주소</label>
-										<!--end::Label-->
-										<!--begin::Input-->
-										<input class="form-control form-control-solid" placeholder="" name="address1" id="address2" />
-										<!--end::Input-->
-									</div>
-
-									<div class="row mb-15">
-										<div class="col-md-6 fv-row">
-											<!--begin::Label-->
-											<label class=" fs-5 fw-semibold mb-2">전화번호</label>
-											<!--end::Label-->
-											<!--begin::Input-->
-											<input type="text" class="form-control form-control-solid" id="acc_phone" placeholder="" name=""oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
-											<!--end::Input-->
-										</div>
-										<!--end::Col-->
-										<!--begin::Col-->
-										<div class="col-md-6 fv-row">
-											<!--end::Label-->
-											<label class=" fs-5 fw-semibold mb-2">FAX 번호</label>
-											<!--end::Label-->
-											<!--end::Input-->
-											<input type="text" class="form-control form-control-solid" id="acc_fax" placeholder="" name="" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
-											<!--end::Input-->
-										</div>
-
-										<div class="fv-row mb-10 mt-15" >
-
-											<input type="file" name="file" id="file" class="input-file">
-<label for="file" class="btn btn-tertiary js-labelFile">
-<i class="icon fa fa-check"></i>
-<span class="js-fileName">사업자 등록증</span>
-</label>
-
-											<!--end::Hint-->
-										</div>
-									</div>
-									<div class="text-center">
-										<button type="button"  class="btn btn-light me-3" onclick="cancel();">취소</button>
-										<button type="button"  class="btn btn-primary" onclick="insert();">
-											<span class="indicator-label">등록</span>
-											<span class="indicator-progress">Please wait...
-											<span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
-										</button>
-									</div>
-									<!--end::Actions-->
-								</form>
-								<!--end:Form-->
-							</div>
-							<!--end::Modal body-->
-						</div>
-						<!--end::Modal content-->
-					</div>
-					<!--end::Modal dialog-->
-				</div>
 				<!--begin::Wrapper-->
 				<div class="wrapper d-flex flex-column flex-row-fluid" id="kt_wrapper">
 					<!--begin::Header tablet and mobile-->
@@ -3648,6 +3396,169 @@ color: #5AAC7B;
 											<!--end::Reset-->
 										</form>
 										<!--end::Form-->
+
+										<div class="modal fade" id="kt_modal_new_target" tabindex="-1" aria-hidden="true">
+											<!--begin::Modal dialog-->
+											<div class="modal-dialog modal-dialog-centered mw-650px">
+												<!--begin::Modal content-->
+												<div class="modal-content rounded">
+													<!--begin::Modal header-->
+													<div class="modal-header pb-0 border-0 justify-content-end">
+														<!--begin::Close-->
+														<div class="btn btn-sm btn-icon btn-active-color-primary" data-bs-dismiss="modal">
+															<!--begin::Svg Icon | path: icons/duotune/arrows/arr061.svg-->
+															<span class="svg-icon svg-icon-1">
+																<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																	<rect opacity="0.5" x="6" y="17.3137" width="16" height="2" rx="1" transform="rotate(-45 6 17.3137)" fill="currentColor" />
+																	<rect x="7.41422" y="6" width="16" height="2" rx="1" transform="rotate(45 7.41422 6)" fill="currentColor" />
+																</svg>
+															</span>
+															<!--end::Svg Icon-->
+														</div>
+														<!--end::Close-->
+													</div>
+													<!--begin::Modal header-->
+													<!--begin::Modal body-->
+													<div class="modal-body scroll-y px-10 px-lg-15 pt-0 pb-15">
+														<!--begin:Form-->
+														<form id="kt_modal_new_target_form" class="form" action="#">
+															<!--begin::Heading-->
+															<div class="mb-13 text-center">
+																<!--begin::Title-->
+																<h1 class="mb-3">거래처 정보 등록</h1>
+																<!--end::Title-->
+																<!--begin::Description-->
+																<div class="text-muted fw-semibold fs-5">거래처 정보를 입력한 후
+																<a href="#" class="fw-bold link-primary">확인해 주세요</a>.</div>
+																<!--end::Description-->
+															</div>
+															<!--end::Heading-->
+															<!--begin::Input group-->
+
+
+															<div class="d-flex flex-column mb-5 fv-row">
+																<!--begin::Label-->
+																<label class="required fs-5 fw-semibold mb-2">업체명</label>
+																<!--end::Label-->
+																<!--begin::Input-->
+																<input class="form-control form-control-solid" placeholder="" name="address1" id="acc_name" />
+																<!--end::Input-->
+															</div>
+
+
+
+															<div class="row mb-5">
+																<div class="col-md-6 fv-row">
+																	<!--begin::Label-->
+																	<label class="required fs-5 fw-semibold mb-2">사업자번호</label>
+																	<!--end::Label-->
+																	<!--begin::Input-->
+																	<input type="text" class="form-control form-control-solid" placeholder="" name="" id="acc_bu_no"/>
+																	<!--end::Input-->
+																</div>
+																<!--end::Col-->
+																<?php
+																include '../../ajax/databaselog.php';
+
+																$sql = "SELECT * FROM dbo.account_status";
+																$result = sqlsrv_query($con,$sql,$params,$options);
+
+																$total = sqlsrv_num_rows($result);
+
+
+
+																 ?>
+
+																<!--begin::Col-->
+																<div class="col-md-6 fv-row">
+																	<!--end::Label-->
+																	<label class="required fs-5 fw-semibold mb-2">업태</label>
+																	<!--end::Label-->
+																	<!--end::Input-->
+																	<select name="timezone" data-hide-search="true" aria-label="Select a Timezone" data-control="select2" data-placeholder="date_period" class="form-select form-select-solid" id="acc_status">
+																		<?php
+																		for ($i=0; $i < $total; $i++) {
+																			$row = sqlsrv_fetch_array($result);
+																			$status_no = $row['status_no'];
+																			$status_name = $row['status_name'];
+																		 ?>
+																		<option value="<?=$status_no?>"><?=$status_name?></option>
+
+																	<?php } ?>
+																	</select>
+																	<!--end::Input-->
+																</div>
+															</div>
+
+															<div class="fv-row mb-7">
+																<!--begin::Label-->
+																<label class="fw-semibold fs-6 mb-2">주소</label>
+																<button type="button" class="btn btn-outline btn-outline-dashed btn-outline-primary btn-active-light-primary" onclick="open_address();">찾기
+																</button>
+																<!--end::Label-->
+																<!--begin::Input-->
+																<input type="text" name="user_name" id="address1"  class="form-control form-control-solid mb-3 mb-lg-0" placeholder="" value="" />
+																<!--end::Input-->
+															</div>
+
+															<div class="d-flex flex-column mb-5 fv-row">
+																<!--begin::Label-->
+																<label class=" fs-5 fw-semibold mb-2">상세 주소</label>
+																<!--end::Label-->
+																<!--begin::Input-->
+																<input class="form-control form-control-solid" placeholder="" name="address1" id="address2" />
+																<!--end::Input-->
+															</div>
+
+															<div class="row mb-15">
+																<div class="col-md-6 fv-row">
+																	<!--begin::Label-->
+																	<label class=" fs-5 fw-semibold mb-2">전화번호</label>
+																	<!--end::Label-->
+																	<!--begin::Input-->
+																	<input type="text" class="form-control form-control-solid" id="acc_phone" placeholder="" name=""oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
+																	<!--end::Input-->
+																</div>
+																<!--end::Col-->
+																<!--begin::Col-->
+																<div class="col-md-6 fv-row">
+																	<!--end::Label-->
+																	<label class=" fs-5 fw-semibold mb-2">FAX 번호</label>
+																	<!--end::Label-->
+																	<!--end::Input-->
+																	<input type="text" class="form-control form-control-solid" id="acc_fax" placeholder="" name="" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
+																	<!--end::Input-->
+																</div>
+
+																<div class="fv-row mb-10 mt-15" >
+
+																	<input type="file" name="file" id="file" class="input-file">
+						<label for="file" class="btn btn-tertiary js-labelFile">
+						<i class="icon fa fa-check"></i>
+						<span class="js-fileName">사업자 등록증</span>
+						</label>
+
+																	<!--end::Hint-->
+																</div>
+															</div>
+															<div class="text-center">
+																<button type="button"  class="btn btn-light me-3" onclick="cancel();">취소</button>
+																<button type="button"  class="btn btn-primary" onclick="insert();">
+																	<span class="indicator-label">등록</span>
+																	<span class="indicator-progress">Please wait...
+																	<span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
+																</button>
+															</div>
+															<!--end::Actions-->
+														</form>
+														<!--end:Form-->
+													</div>
+													<!--end::Modal body-->
+												</div>
+												<!--end::Modal content-->
+											</div>
+											<!--end::Modal dialog-->
+										</div>
 										<!--begin::Menu-->
 										<div data-kt-search-element="content" class="menu menu-sub menu-sub-dropdown w-300px w-md-350px py-7 px-7 overflow-hidden">
 											<!--begin::Wrapper-->
@@ -5210,9 +5121,6 @@ color: #5AAC7B;
 												<!--begin::Content-->
 												<div class="px-7 py-5" data-kt-subscription-table-filter="form">
 													<!--begin::Input group-->
-
-													<!--end::Input group-->
-													<!--begin::Input group-->
 													<div class="mb-10">
 														<label class="form-label fs-6 fw-semibold">업태:</label>
 														<select class="form-select form-select-solid fw-bold" data-kt-select2="true" data-placeholder="Select option" data-allow-clear="true" data-kt-subscription-table-filter="billing" data-hide-search="true">
@@ -5245,6 +5153,29 @@ color: #5AAC7B;
 														</select>
 													</div>
 													<!--end::Input group-->
+													<!--begin::Input group-->
+													<!-- <div class="mb-10">
+														<label class="form-label fs-6 fw-semibold">업태:</label>
+														<select class="form-select form-select-solid fw-bold" data-kt-select2="true" data-placeholder="Select option" data-allow-clear="true" data-kt-subscription-table-filter="billing" data-hide-search="true">
+															<option></option>
+
+
+														</select>
+													</div> -->
+
+													<!-- <div class="mb-10">
+														<label class="form-label fs-6 fw-semibold">Product:</label>
+														<select class="form-select form-select-solid fw-bold" data-kt-select2="true" data-placeholder="Select option" data-allow-clear="true" data-kt-subscription-table-filter="product" data-hide-search="true">
+															<option></option>
+															<option value="Basic">Basic</option>
+															<option value="Basic Bundle">Basic Bundle</option>
+															<option value="Teams">Teams</option>
+															<option value="Teams Bundle">Teams Bundle</option>
+															<option value="Enterprise">Enterprise</option>
+															<option value=" Enterprise Bundle">Enterprise Bundle</option>
+														</select>
+													</div> -->
+													<!--end::Input group-->
 													<!--begin::Actions-->
 													<div class="d-flex justify-content-end">
 														<button type="reset" class="btn btn-light btn-active-light-primary fw-semibold me-2 px-6" data-kt-menu-dismiss="true" data-kt-subscription-table-filter="reset">Reset</button>
@@ -5267,7 +5198,8 @@ color: #5AAC7B;
 										<div class="d-flex justify-content-end align-items-center d-none" data-kt-subscription-table-toolbar="selected">
 											<div class="fw-bold me-5">
 											<span class="me-2" data-kt-subscription-table-select="selected_count"></span>Selected</div>
-											<button type="button" class="btn btn-danger" onclick="remove();">Delete Selected</button>
+											<button type="button" class="btn btn-danger"  onclick="remove();">Delete Selected</button>
+											<input type="hidden" data-kt-subscription-table-select="delete_selected"/>
 										</div>
 										<!--end::Group actions-->
 									</div>
@@ -5301,10 +5233,8 @@ color: #5AAC7B;
 										<!--end::Table head-->
 										<!--begin::Table body-->
 										<tbody class="text-gray-600 fw-semibold">
-
-
-
 											<?php
+											include '../../ajax/databaselog.php';
 											$sql = "  SELECT A.no,A.acc_name,A.acc_bu_no,B.status_name,A.acc_add1,A.acc_phone FROM dbo.account A LEFT OUTER JOIN dbo.account_status B ON A.acc_status = B.status_no";
 											$result = sqlsrv_query($con,$sql,$params,$options);
 
@@ -5383,8 +5313,6 @@ color: #5AAC7B;
 												<!--end::Action=-->
 											</tr>
 										<?php } ?>
-
-
 
 										</tbody>
 										<!--end::Table body-->
@@ -7918,9 +7846,6 @@ color: #5AAC7B;
 								</span>
 								<!--end::Reset-->
 							</form>
-
-
-
 							<!--end::Form-->
 							<!--begin::Wrapper-->
 							<div class="py-5">
@@ -9231,244 +9156,242 @@ color: #5AAC7B;
 		<!--begin::Custom Javascript(used by this page)-->
 		<script src="assets/js/custom/apps/subscriptions/list/export.js"></script>
 		<script src="assets/js/custom/apps/subscriptions/list/list.js"></script>
-				<script src="assets/js/custom/apps/file-manager/list.js"></script>
 		<script src="assets/js/widgets.bundle.js"></script>
 		<script src="assets/js/custom/widgets.js"></script>
 		<script src="assets/js/custom/apps/chat/chat.js"></script>
 		<script src="assets/js/custom/utilities/modals/upgrade-plan.js"></script>
 		<script src="assets/js/custom/utilities/modals/users-search.js"></script>
-				<script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+		<script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 
-				<script>
-				function open_address(){
+		<script>
+		function open_address(){
 
-							new daum.Postcode({
-										oncomplete: function(data) {
-										 // 팝업에서 검색결과 항목을 클릭했을때 실행할 코드를 작성하는 부분.
+					new daum.Postcode({
+								oncomplete: function(data) {
+								 // 팝업에서 검색결과 항목을 클릭했을때 실행할 코드를 작성하는 부분.
 
-										 // 도로명 주소의 노출 규칙에 따라 주소를 조합한다.
-										 // 내려오는 변수가 값이 없는 경우엔 공백('')값을 가지므로, 이를 참고하여 분기 한다.
-										 var fullRoadAddr = data.roadAddress; // 도로명 주소 변수
-										 var extraRoadAddr = ''; // 도로명 조합형 주소 변수
+								 // 도로명 주소의 노출 규칙에 따라 주소를 조합한다.
+								 // 내려오는 변수가 값이 없는 경우엔 공백('')값을 가지므로, 이를 참고하여 분기 한다.
+								 var fullRoadAddr = data.roadAddress; // 도로명 주소 변수
+								 var extraRoadAddr = ''; // 도로명 조합형 주소 변수
 
-										 // 법정동명이 있을 경우 추가한다. (법정리는 제외)
-										 // 법정동의 경우 마지막 문자가 "동/로/가"로 끝난다.
-										 if(data.bname !== '' && /[동|로|가]$/g.test(data.bname)){
-												 extraRoadAddr += data.bname;
-										 }
-										 // 건물명이 있고, 공동주택일 경우 추가한다.
-										 if(data.buildingName !== '' && data.apartment === 'Y'){
-												extraRoadAddr += (extraRoadAddr !== '' ? ', ' + data.buildingName : data.buildingName);
-										 }
-										 // 도로명, 지번 조합형 주소가 있을 경우, 괄호까지 추가한 최종 문자열을 만든다.
-										 if(extraRoadAddr !== ''){
-												 extraRoadAddr = ' (' + extraRoadAddr + ')';
-										 }
-										 // 도로명, 지번 주소의 유무에 따라 해당 조합형 주소를 추가한다.
-										 if(fullRoadAddr !== ''){
-												 fullRoadAddr += extraRoadAddr;
-										 }
+								 // 법정동명이 있을 경우 추가한다. (법정리는 제외)
+								 // 법정동의 경우 마지막 문자가 "동/로/가"로 끝난다.
+								 if(data.bname !== '' && /[동|로|가]$/g.test(data.bname)){
+										 extraRoadAddr += data.bname;
+								 }
+								 // 건물명이 있고, 공동주택일 경우 추가한다.
+								 if(data.buildingName !== '' && data.apartment === 'Y'){
+										extraRoadAddr += (extraRoadAddr !== '' ? ', ' + data.buildingName : data.buildingName);
+								 }
+								 // 도로명, 지번 조합형 주소가 있을 경우, 괄호까지 추가한 최종 문자열을 만든다.
+								 if(extraRoadAddr !== ''){
+										 extraRoadAddr = ' (' + extraRoadAddr + ')';
+								 }
+								 // 도로명, 지번 주소의 유무에 따라 해당 조합형 주소를 추가한다.
+								 if(fullRoadAddr !== ''){
+										 fullRoadAddr += extraRoadAddr;
+								 }
 
-										 // 주소 정보를 해당 필드에 넣는다.
-										 document.getElementById('address1').value = fullRoadAddr;//도로명주소
+								 // 주소 정보를 해당 필드에 넣는다.
+								 document.getElementById('address1').value = fullRoadAddr;//도로명주소
 
 
 
-										}
-								}).open();
+								}
+						}).open();
 
-				}
-				</script>
-				<script>
-  (function() {
+		}
+		</script>
+		<script>
+(function() {
 
-    'use strict';
+'use strict';
 
-    $('.input-file').each(function() {
-      var $input = $(this),
-          $label = $input.next('.js-labelFile'),
-          labelVal = $label.html();
+$('.input-file').each(function() {
+	var $input = $(this),
+			$label = $input.next('.js-labelFile'),
+			labelVal = $label.html();
 
-     $input.on('change', function(element) {
-        var fileName = '';
-        if (element.target.value) fileName = element.target.value.split('\\').pop();
-        fileName ? $label.addClass('has-file').find('.js-fileName').html(fileName) : $label.removeClass('has-file').html(labelVal);
-     });
-    });
+ $input.on('change', function(element) {
+		var fileName = '';
+		if (element.target.value) fileName = element.target.value.split('\\').pop();
+		fileName ? $label.addClass('has-file').find('.js-fileName').html(fileName) : $label.removeClass('has-file').html(labelVal);
+ });
+});
 
-  })();
-	function cancel(){
-		$('#kt_modal_new_target').modal('hide');
+})();
+function cancel(){
+$('#kt_modal_new_target').modal('hide');
+}
+function insert(){
+var formData = new FormData();
+
+var acc_name = $("#acc_name").val();
+var acc_bu_no = $("#acc_bu_no").val();
+var acc_status = $("#acc_status").val();
+var acc_add1 = $("#address1").val();
+var acc_add2 = $("#address2").val();
+var acc_phone = $("#acc_phone").val();
+var acc_fax = $("#acc_fax").val();
+
+
+var imageInput = $("#file")[0];
+// 파일을 여러개 선택할 수 있으므로 files 라는 객체에 담긴다.
+console.log("imageInput: ", imageInput.files)
+
+// if(imageInput.files.length === 0){
+//   alert("파일은 선택해주세요");
+//   return;
+// }
+
+var formData = new FormData();
+formData.append("image", imageInput.files[0]);
+
+
+console.log(imageInput)
+console.log(formData)
+
+if(acc_name == ''){
+Swal.fire({
+	title: '업체명을 입력하세요!',
+	showClass: {
+		popup: 'animate__animated animate__fadeInDown'
+	},
+	hideClass: {
+		popup: 'animate__animated animate__fadeOutUp'
 	}
-	function insert(){
-		var formData = new FormData();
-
-	var acc_name = $("#acc_name").val();
-	var acc_bu_no = $("#acc_bu_no").val();
-	var acc_status = $("#acc_status").val();
-	var acc_add1 = $("#address1").val();
-	var acc_add2 = $("#address2").val();
-	var acc_phone = $("#acc_phone").val();
-	var acc_fax = $("#acc_fax").val();
-
-
-	var imageInput = $("#file")[0];
-  // 파일을 여러개 선택할 수 있으므로 files 라는 객체에 담긴다.
-  console.log("imageInput: ", imageInput.files)
-
-  // if(imageInput.files.length === 0){
-  //   alert("파일은 선택해주세요");
-  //   return;
-  // }
-
-  var formData = new FormData();
-  formData.append("image", imageInput.files[0]);
-
-
-	console.log(imageInput)
-	console.log(formData)
-
-	if(acc_name == ''){
-		Swal.fire({
-			title: '업체명을 입력하세요!',
-			showClass: {
-				popup: 'animate__animated animate__fadeInDown'
-			},
-			hideClass: {
-				popup: 'animate__animated animate__fadeOutUp'
-			}
-		})
-		return;
+})
+return;
+}
+if(acc_bu_no == ''){
+Swal.fire({
+	title: '사업자번호를 입력하세요!',
+	showClass: {
+		popup: 'animate__animated animate__fadeInDown'
+	},
+	hideClass: {
+		popup: 'animate__animated animate__fadeOutUp'
 	}
-	if(acc_bu_no == ''){
-		Swal.fire({
-			title: '사업자번호를 입력하세요!',
-			showClass: {
-				popup: 'animate__animated animate__fadeInDown'
-			},
-			hideClass: {
-				popup: 'animate__animated animate__fadeOutUp'
-			}
-		})
-		return;
-	}
+})
+return;
+}
 
 var file_name = '';
-	$.ajax({
-		type: 'post',
-		url: './ajax/insert_data.php',
-		async:false, // 전역변수 설정 변수
-		enctype: 'multipart/form-data', // 필수
-		processData: false, // 필수
-		contentType: false, // 필수
-		data: formData, // 필수
+$.ajax({
+type: 'post',
+url: './ajax/insert_data.php',
+async:false, // 전역변수 설정 변수
+enctype: 'multipart/form-data', // 필수
+processData: false, // 필수
+contentType: false, // 필수
+data: formData, // 필수
 
-		success: function (data) {
-			file_name = data;
+success: function (data) {
+	file_name = data;
 
 
+},
+error: function (request, status, error) {
+	console.log('code: '+request.status+"\n"+'message: '+request.responseText+"\n"+'error: '+error);
+}
+});
+
+
+$.ajax({
+type: 'post',
+url: './ajax/insert_acc.php',
+async:false, // 전역변수 설정 변수
+data:{
+
+	acc_name:acc_name,   //컬럼
+		acc_bu_no:acc_bu_no,   //컬럼
+			acc_status:acc_status,   //컬럼
+				acc_add1:acc_add1,   //컬럼
+					acc_add2:acc_add2,   //컬럼
+						acc_phone:acc_phone,   //컬럼
+						acc_fax:acc_fax,   //컬럼
+						file_name:file_name,
+
+
+},
+success: function (data) {
+	console.log(data)
+		$("#insert_btn2").hide();
+	$("#insert_btn").show();
+
+	Swal.fire({
+		title: '등록되었습니다!',
+		icon: 'success',
+		showClass: {
+			popup: 'animate__animated animate__fadeInDown'
 		},
-		error: function (request, status, error) {
-			console.log('code: '+request.status+"\n"+'message: '+request.responseText+"\n"+'error: '+error);
+		hideClass: {
+			popup: 'animate__animated animate__fadeOutUp'
 		}
-	});
+	})
+		$('.swal2-confirm').click(function() {
+			location.reload();
+		});
+
+	// location.reload();
+
+},
+error: function (request, status, error) {
+	console.log('code: '+request.status+"\n"+'message: '+request.responseText+"\n"+'error: '+error);
+}
+});
 
 
-	$.ajax({
-		type: 'post',
-		url: './ajax/insert_acc.php',
-		async:false, // 전역변수 설정 변수
-		data:{
-
-			acc_name:acc_name,   //컬럼
-				acc_bu_no:acc_bu_no,   //컬럼
-					acc_status:acc_status,   //컬럼
-						acc_add1:acc_add1,   //컬럼
-							acc_add2:acc_add2,   //컬럼
-								acc_phone:acc_phone,   //컬럼
-								acc_fax:acc_fax,   //컬럼
-								file_name:file_name,
+}
 
 
-		},
-		success: function (data) {
-			console.log(data)
-				$("#insert_btn2").hide();
-			$("#insert_btn").show();
-
-			Swal.fire({
-				title: '등록되었습니다!',
-				icon: 'success',
-				showClass: {
-					popup: 'animate__animated animate__fadeInDown'
-				},
-				hideClass: {
-					popup: 'animate__animated animate__fadeOutUp'
-				}
-			})
-			  $('.swal2-confirm').click(function() {
-					location.reload();
-				});
-
-			// location.reload();
-
-		},
-		error: function (request, status, error) {
-			console.log('code: '+request.status+"\n"+'message: '+request.responseText+"\n"+'error: '+error);
-		}
-	});
+function remove(){
+var check_box_array = new Array();
+// 체크박스 체크값들을 check_box_array에 배열로 담는다.
+$("input[name=chk]:checked").each(function(){
+	var check = $(this).val();
+	check_box_array.push(check);
+})
 
 
-	}
-
-	function remove(){
-		var check_box_array = new Array();
-	  // 체크박스 체크값들을 check_box_array에 배열로 담는다.
-	  $("input[name=chk]:checked").each(function(){
-	    var check = $(this).val();
-	    check_box_array.push(check);
-	  })
-
-
-		Swal.fire({
-  title: '정말 삭제하시겠습니까?',
-  showDenyButton: false,
-  showCancelButton: true,
-  confirmButtonText: '삭제',
+Swal.fire({
+title: '정말 삭제하시겠습니까?',
+showDenyButton: false,
+showCancelButton: true,
+confirmButtonText: '삭제',
 }).then((result) => {
-  /* Read more about isConfirmed, isDenied below */
-  if (result.isConfirmed) {
-    Swal.fire('삭제되었습니다', '', 'success')
-  } else if (result.isDenied) {
-    Swal.fire('Changes are not saved', '', 'info')
-  }
+/* Read more about isConfirmed, isDenied below */
+if (result.isConfirmed) {
+Swal.fire('삭제되었습니다', '', 'success')
+} else if (result.isDenied) {
+Swal.fire('Changes are not saved', '', 'info')
+}
 })
 
 
 $('.swal2-confirm').click(function() {
-	$.ajax({
-	type: 'post',
-	url: './ajax/remove.php',
-	async:false, // 전역변수 설정 변수
-	data:{
-		TABLENAME:'account',   //테이블이름
-		WHERENAME:'no',    //where 조건
-		VALUENAME: check_box_array    //where 조건값
-	},
-	success: function (data) {
-		// alert("삭제하였습니다.");
-		window.location.reload();
-	},
-	error: function (request, status, error) {
-	}
+$.ajax({
+type: 'post',
+url: './ajax/remove.php',
+async:false, // 전역변수 설정 변수
+data:{
+TABLENAME:'account',   //테이블이름
+WHERENAME:'no',    //where 조건
+VALUENAME: check_box_array    //where 조건값
+},
+success: function (data) {
+// alert("삭제하였습니다.");
+window.location.reload();
+},
+error: function (request, status, error) {
+}
 });
 });
 
 
-	}
+}
 </script>
-
-
 		<!--end::Custom Javascript-->
 		<!--end::Javascript-->
 	</body>
