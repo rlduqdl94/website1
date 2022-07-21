@@ -5060,7 +5060,7 @@ License: For each use you must have a valid license purchased only from above li
 									</div>
 									<!--end::Theme mode-->
 									<!--begin::Item-->
-									<a href="#" class="btn btn-primary" id="kt_drawer_chat_toggle">Messages</a>
+									<a href="./index_6.php" class="btn btn-primary">MainHome</a>
 									<!--end::Item-->
 								</div>
 								<!--end::Action-->
@@ -5235,14 +5235,14 @@ License: For each use you must have a valid license purchased only from above li
 										<tbody class="text-gray-600 fw-semibold">
 											<?php
 											include '../../ajax/databaselog.php';
-											$sql = "  SELECT A.no,A.acc_name,A.acc_bu_no,B.status_name,A.acc_add1,A.acc_phone FROM dbo.account A LEFT OUTER JOIN dbo.account_status B ON A.acc_status = B.status_no";
+											$sql = "  SELECT A.acc_no,A.acc_name,A.acc_bu_no,B.status_name,A.acc_add1,A.acc_phone FROM dbo.account A LEFT OUTER JOIN dbo.account_status B ON A.acc_status = B.status_no";
 											$result = sqlsrv_query($con,$sql,$params,$options);
 
 											$total = sqlsrv_num_rows($result);
 
 											for ($i=0; $i < $total; $i++) {
 												$row = sqlsrv_fetch_array($result);
-												$no = $row['no'];
+												$no = $row['acc_no'];
 												$acc_name = $row['acc_name'];
 												$acc_bu_no = $row['acc_bu_no'];
 												$status_name = $row['status_name'];

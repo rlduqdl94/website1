@@ -14,7 +14,7 @@ $file_name = $_POST['file_name'];
 
 
 
-$sql = "UPDATE dbo.account SET acc_name = '$acc_name', acc_bu_no = '$acc_bu_no', acc_status = '$acc_status', acc_add1 = '$acc_add1', acc_add2 = '$acc_add2', acc_phone = '$acc_phone', acc_fax = '$acc_fax', acc_file = '$file_name' WHERE no = $no";
+$sql = "UPDATE dbo.account SET acc_name = '$acc_name', acc_bu_no = '$acc_bu_no', acc_status = '$acc_status', acc_add1 = '$acc_add1', acc_add2 = '$acc_add2', acc_phone = '$acc_phone', acc_fax = '$acc_fax', acc_file = '$file_name' WHERE acc_no = $no";
 
 
 

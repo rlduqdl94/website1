@@ -14,7 +14,7 @@ if($total >0){
 $row = sqlsrv_fetch_array($result);
 $emp_no = $row['emp_no'];
 if($emp_no == 9999){
-  $total = 1;
+  $total = 6;
 }else{
   $sql = "SELECT TOP(1) * FROM dbo.employee WHERE emp_no = $emp_no";
   $result = sqlsrv_query($con,$sql);

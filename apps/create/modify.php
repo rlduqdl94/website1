@@ -9859,6 +9859,7 @@ var table = '';
 			for (var i = 0; i < retVal.length; i++) {
 				var base64 = retVal[i].image_url;
 				 base64 = base64.slice(0, base64.length - 1);
+				 console.log(base64)//d이거오늘수정해!
 				table += '<tr class="product_count">';
 					table += '<td><span class="d-flex flex-column me-3"><span class="fw-bold pro_name" id="'+retVal[i].pro_no+'" >'+retVal[i].pro_name+'</span><span class="text-gray-400 fw-semibold fs-6 pro_category" id="'+retVal[i].category_no+'">'+retVal[i].pro_category+'</span></span></td>';
 						table += '<td><span class="pro_stand">'+retVal[i].pro_stand+'</span> / <span class="pro_height">'+retVal[i].pro_height+'</span></td>';
