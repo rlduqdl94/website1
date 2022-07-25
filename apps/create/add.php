@@ -5116,19 +5116,19 @@ License: For each use you must have a valid license purchased only from above li
 											<div class="mb-10">
 												<!--begin::Title-->
 
-		<h5 class="mb-3">선택</h5>
+												<h5 class="mb-3">선택</h5>
 													<!--begin::Card info-->
 													<div class="text-gray-500 text-center fw-semibold fs-6">
-																						<input type="checkbox" id="regist_status1" class="form-check-input">
-													<label for="id_remember">
-													입금 후 출고
-													</label>
+														<input type="checkbox" id="regist_status1" class="form-check-input">
+														<label for="id_remember">
+														입금 후 출고
+														</label>
 
 
-													<input type="checkbox" id="pw_remember" class="form-check-input">
-													<label for="pw_remember">
-														즉시 출하
-													</label>
+														<input type="checkbox" id="pw_remember" class="form-check-input">
+														<label for="pw_remember">
+															즉시 출하
+														</label>
 													</div>
 
 												<!--end::Details-->
@@ -5151,7 +5151,7 @@ License: For each use you must have a valid license purchased only from above li
 													$today = Date('Y-m-d');
 													 ?>
 													<div class="fw-semibold text-gray-600 d-flex align-items-center">
-<input class="form-control form-control-solid" name="calendar_event_start_date" id="datep1" value="<?=$today?>"  />
+														<input class="form-control form-control-solid" name="calendar_event_start_date" id="datep1" value="<?=$today?>"  />
 												</div>
 													<!--end::Card info-->
 													<!--begin::Card expiry-->
@@ -5163,7 +5163,10 @@ License: For each use you must have a valid license purchased only from above li
 
 											<!--end::Actions-->
 										</div>
-										<a class="btn btn-primary" style="margin-top:5%;" onclick="insert_page();" >등록</a>
+
+										<div class="card-footer">
+											<a class="btn btn-primary" style="margin-top:5%; width: 100%;" onclick="insert_page();" >등록</a>
+										</div>
 										<!--end::Card body-->
 									</div>
 
@@ -5204,24 +5207,38 @@ License: For each use you must have a valid license purchased only from above li
 											</div>
 											<!--end::Content-->
 											<!--begin::Search-->
-											<div id="kt_modal_customer_search_handler" data-kt-search-keypress="true" data-kt-search-min-length="2" data-kt-search-enter="enter" data-kt-search-layout="inline">
-												<!--begin::Form-->
 
-													<!--begin::Hidden input(Added to disable form autocomplete)-->
-													<input type="hidden" />
-													<!--end::Hidden input-->
-													<!--begin::Icon-->
-													<!--begin::Svg Icon | path: icons/duotune/general/gen021.svg-->
-													<span class="svg-icon svg-icon-2 svg-icon-lg-1 svg-icon-gray-500 position-absolute top-50 ms-5 translate-middle-y">
-														<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-															<rect opacity="0.5" x="17.0365" y="15.1223" width="8.15546" height="2" rx="1" transform="rotate(45 17.0365 15.1223)" fill="currentColor" />
-															<path d="M11 19C6.55556 19 3 15.4444 3 11C3 6.55556 6.55556 3 11 3C15.4444 3 19 6.55556 19 11C19 15.4444 15.4444 19 11 19ZM11 5C7.53333 5 5 7.53333 5 11C5 14.4667 7.53333 17 11 17C14.4667 17 17 14.4667 17 11C17 7.53333 14.4667 5 11 5Z" fill="currentColor" />
-														</svg>
-													</span>
-													<!--end::Svg Icon-->
-													<!--end::Icon-->
-													<!--begin::Input-->
-													<input list="languages2" class="form-control form-control-lg form-control-solid px-15" name="search" value="" placeholder="거래처 명을 입력 후 엔터"  id="acc_search" autocomplete="off"/>
+											<div class="d-none d-lg-block w-100 mb-5 mb-lg-0 position-relative">
+												<div id="kt_modal_customer_search_handler" data-kt-search-keypress="true" data-kt-search-min-length="2" data-kt-search-enter="enter" data-kt-search-layout="inline">
+													<!--begin::Form-->
+
+														<!--begin::Hidden input(Added to disable form autocomplete)-->
+														<input type="hidden" />
+														<!--end::Hidden input-->
+														<!--begin::Icon-->
+														<!--begin::Svg Icon | path: icons/duotune/general/gen021.svg-->
+														<span class="svg-icon svg-icon-2 svg-icon-lg-1 svg-icon-gray-500 position-absolute top-50 ms-5 translate-middle-y">
+															<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																<rect opacity="0.5" x="17.0365" y="15.1223" width="8.15546" height="2" rx="1" transform="rotate(45 17.0365 15.1223)" fill="currentColor" />
+																<path d="M11 19C6.55556 19 3 15.4444 3 11C3 6.55556 6.55556 3 11 3C15.4444 3 19 6.55556 19 11C19 15.4444 15.4444 19 11 19ZM11 5C7.53333 5 5 7.53333 5 11C5 14.4667 7.53333 17 11 17C14.4667 17 17 14.4667 17 11C17 7.53333 14.4667 5 11 5Z" fill="currentColor" />
+															</svg>
+														</span>
+														<!--end::Svg Icon-->
+														<!--end::Icon-->
+														<!--begin::Input-->
+														<!-- <select class="form-select form-select-solid" data-control="select2" id="" autocomplete="off">
+															<option value="">Select user...</option>
+															<option value="1">Karina Clark</option>
+															<option value="2">Robert Doe</option>
+															<option value="3">Niel Owen</option>
+															<option value="4">Olivia Wild</option>
+															<option value="5">Sean Bean</option>
+														</select> -->
+
+														<input list="languages2" class="form-control form-control-lg form-control-solid px-15" name="search" value="" placeholder="거래처 명을 입력 후 엔터"  id="acc_search" autocomplete="off"/>
+											</div>
+
+
 	<?php
 
 $sql = "SELECT * FROM dbo.account";
